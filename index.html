@@ -3220,7 +3220,7 @@
       var before = LC_STRIP;
       if (!adoptStrip(strip)) return;
       if (JSON.stringify(before.contracts) === JSON.stringify(LC_STRIP.contracts) && before.asOf === LC_STRIP.asOf &&
-          before.priceType === LC_STRIP.priceType) { renderFuturesFooter(); return; }
+          before.priceType === LC_STRIP.priceType) { render(); renderFuturesFooter(); return; }
       syncLockedSales();
       syncInputsFromState("A");
       syncInputsFromState("B");
