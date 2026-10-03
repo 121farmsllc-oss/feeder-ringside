@@ -2061,21 +2061,21 @@
       sex: "steer",
       buyCwt: isB ? 310 : 355,
       truckIn: 25,
-      buyComm: 2,
+      buyComm: 0,
       vet: 25,
       otherBuy: 0,
-      saleWt: 1400,
+      saleWt: 1650,
       adg: 3.0,
-      feedPerLb: 1.10,
+      feedPerLb: 0.75,
       yardage: 0.50,
       deathLoss: 2,
-      interestRate: 8,
+      interestRate: 0,
       health: 15,
       misc: 0,
       targetProfit: 50,
       sellCwt: 215,
       truckOut: 30,
-      sellComm: 2,
+      sellComm: 0,
       shrink: 3,
       // Live Cattle finish / sell helpers (futures strip itself is global: LC_STRIP)
       basis: -3,
@@ -2189,6 +2189,12 @@
         if (data[k].lockToFutures == null) state[k].lockToFutures = false;
         state[k].lockToFutures = !!state[k].lockToFutures;
         if (state[k].sex !== "heifer") state[k].sex = "steer";
+        // One-time: apply Brian's own numbers (Oct 3, 2026) to devices saved before them
+        if (!data.brianDefaults_v1) {
+          state[k].saleWt = 1650; state[k].feedPerLb = 0.75;
+          state[k].buyComm = 0; state[k].sellComm = 0; state[k].interestRate = 0;
+          state[k].lockToFutures = true;
+        }
       });
       if (data.view === "A" || data.view === "B" || data.view === "both") state.view = data.view;
     } catch (e) { /* ignore */ }
@@ -2199,7 +2205,8 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify({
         A: state.A,
         B: state.B,
-        view: state.view
+        view: state.view,
+        brianDefaults_v1: true
       }));
     } catch (e) { /* ignore */ }
   }
