@@ -3372,9 +3372,9 @@
 
   function ringAssumeShort(c) {
     var inp = c.inp;
-    return (c.kind === "B" ? "Holstein tab" : "Beef tab") + ": sell " + fmtMoney(c.sale.price, 2) +
-      (c.sale.locked ? " (" + c.sale.pick.contract.label + " futures as of " + fmtIsoDate(LC_STRIP.asOf, false) + ")"
-        : " (manual; LC as of " + fmtIsoDate(LC_STRIP.asOf, false) + ")") +
+    return (c.kind === "B" ? "Holstein" : "Beef") + ": sell " + fmtMoney(c.sale.price, 2) +
+      (c.sale.locked ? " (" + c.sale.pick.contract.label + " as of " + fmtIsoDate(LC_STRIP.asOf, false) + ")"
+        : " (manual · LC as of " + fmtIsoDate(LC_STRIP.asOf, false) + ")") +
       " · feed " + fmtMoney(n(inp.feedPerLb), 2) + "/lb · " + fmtNum(inp.adg, 1) + " lb/day · goal " + fmtMoney(c.target, 0) + "/hd" +
       " · " + fmtNum(inp.saleWt, 0) + " lb finish · death " + fmtNum(inp.deathLoss, 1) + "% · shrink " + fmtNum(inp.shrink, 1) + "%";
   }
