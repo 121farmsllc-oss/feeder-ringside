@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "product": "CME Live Cattle futures (LE)",
+  "units": "USD per cwt (= cents per lb)",
+  "asOf": "2026-10-02",
+  "priceType": "settle",
+  "source": "Oct 2, 2026 settlements entered by hand: Farmbucks LE futures chain (CME data) = CME final settle Oct 1, 2026 (cmegroup.com settlements) + Oct 2 net change; Dec26/Feb27 cross-checked with Brownfield Ag News Oct 2 closing report",
+  "sourceShort": "CME settlements via Farmbucks (cross-checked Brownfield)",
+  "generatedAt": "2026-10-03T01:20:00Z",
+  "contracts": [
+    {
+      "code": "Oct2026",
+      "label": "Oct26",
+      "symbol": "LEV26",
+      "year": 2026,
+      "month": 10,
+      "price": 218.85,
+      "date": "2026-10-02"
+    },
+    {
+      "code": "Dec2026",
+      "label": "Dec26",
+      "symbol": "LEZ26",
+      "year": 2026,
+      "month": 12,
+      "price": 221.475,
+      "date": "2026-10-02"
+    },
+    {
+      "code": "Feb2027",
+      "label": "Feb27",
+      "symbol": "LEG27",
+      "year": 2027,
+      "month": 2,
+      "price": 223.15,
+      "date": "2026-10-02"
+    },
+    {
+      "code": "Apr2027",
+      "label": "Apr27",
+      "symbol": "LEJ27",
+      "year": 2027,
+      "month": 4,
+      "price": 224.55,
+      "date": "2026-10-02"
+    },
+    {
+      "code": "Jun2027",
+      "label": "Jun27",
+      "symbol": "LEM27",
+      "year": 2027,
+      "month": 6,
+      "price": 219.7,
+      "date": "2026-10-02"
+    },
+    {
+      "code": "Aug2027",
+      "label": "Aug27",
+      "symbol": "LEQ27",
+      "year": 2027,
+      "month": 8,
+      "price": 216.55,
+      "date": "2026-10-02"
+    },
+    {
+      "code": "Oct2027",
+      "label": "Oct27",
+      "symbol": "LEV27",
+      "year": 2027,
+      "month": 10,
+      "price": 215.125,
+      "date": "2026-10-02"
+    },
+    {
+      "code": "Dec2027",
+      "label": "Dec27",
+      "symbol": "LEZ27",
+      "year": 2027,
+      "month": 12,
+      "price": 215.6,
+      "date": "2026-10-02"
+    },
+    {
+      "code": "Feb2028",
+      "label": "Feb28",
+      "symbol": "LEG28",
+      "year": 2028,
+      "month": 2,
+      "price": 215.85,
+      "date": "2026-10-02"
+    },
+    {
+      "code": "Apr2028",
+      "label": "Apr28",
+      "symbol": "LEJ28",
+      "year": 2028,
+      "month": 4,
+      "price": 216.0,
+      "date": "2026-10-02"
+    }
+  ]
+}

@@ -1,0 +1,3903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a3a2a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ring-side" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" id="appleTouchIcon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0BAMAAADP4xsBAAAAMFBMVEX////i7ub/1gr+1grpzQ/Ewi2Ou5N6rnp5p1VWnG9Ij0UzhDkjfj8cej0bej0PKhw+QnT9AAAEfklEQVR42u2bQWgcZRTHfzNpt+ltdhLF4iVNjAl4iWmMNxFF8VipSI/bIikJAW1FUg8Ja8QIYqAqao3ShJ56UeJJEKoLQm3WbdmLiJWaxWMsm48e6rLb3fEwu5uZ2d1kdudNIMvsJTNfkt+8/L/33vfeC6NZhPXRidAROkJ3PfpQ45KlOgHFG1Y0SwTcDK6Lkdne3ertQOpqRmurAyZvq7UgAdRo8ke70Cqww6kWaIGzzGqBVgJxopqiRQ5gqylaiYS3aoIWqhqsJmgZox0cXdhoB2g/8rUSQyoPWrD0s7ribFSCTLVfVosW8FZU4uyGVqJQFWnd1UVwy8+D5zj6S6R1hO4mvy7/uJ6HwuvxE0Mv+uxsLH/t0a/Lufr1YP9rL/hol3yif1h2ZXQ97QPtT+s/llVI21ieV2F5yEYuLOezroTm16VsaOh79rZPfgpHLy+dGBAMmdsAjHzxAJjg5fLK9X+krF4H0N6o3fZMX35aCq0A9Od3Fvq/EkLb84aeMLaxogDKBzJfl1MhoHUDgI+UPLo6rNo6l5IXxEZzdwGsnCx6bOeyMDXzsyTaGXv59NyskkOPu9385kxWDB0z3Pd3/DmLH3TPec/CnXmxkHnJYzbpnBQ6dsEbmpfEAv2Vs56FjFhhpk9r37q2riSXnrTppfF2k5XvcnJyMpN2FA05MasBJhL1LAhZUTTAkWvjvucF7Z4y/V8OhIWuhWY+jLPRVsQKA131xvDQgzJ1yEyu5aEW1Or0XLahuJQK9LtTs3XDy6sAnJQK9MrNqSdODT0KZFayAPqYSN9Ymaz+6MDmTga/IdXc2a686UhWoZWTeiI09MhYWOi+98Oqr/ve9dWE+Wn/M7/95NhB7ZmpveRoZ7Jg3bp9y1J5hX68b4+BRdtDC6CNEWLbfn0Q26QIHaEPELqdQPcPjQI9QkfoCB2hPZ+rpmmafaMpoGSax+CqaT4O3DfNSwClt4fMoYupjq22tk47O7vCTmteGlndZnvl1HrnghTXnE+q31Tm7KdY2QBaf+28qQ9bfl8Lto0L9z7xjNv/rV2sgjad2TjfsYfop73yVJUvrcHsB4PD8zc63sZDnuFYTewCxN4DGE0G0Pqwq+n/zr7YhFjAkHnonnwk2bIvsnA2GLpyDR5x3D9J0Xa2XNBAX+x/E23RsRCr/tcKBQYsmqZ5rHOtZ066G+hv5NKTe8h0hoe1IY4KjP7cJeswxRTAQFCrFzYMR9oAiBm8BTAGV2Ah37nVw9/jFldP2EIch2JAQUbhP4/YAPRCMRkMfdjAcmXkx6rrCfjs47//8oE2Wn0/CUnPs2rWW0sTzzb/JcOXh7zqSKS1ZwE8lQjs171Q8D4LQP/QNk17p2N0g9i91a9H/jxjED93/cJebZJon6T501qgDjEEmUY3FGaa4C56rTakpd4XrTVpPRxWG8J6ONCasNFOrQ1Zo51oTdZol4cYoka70Jqo0W6/NiSNdqO1oOx46/SkycnR+IpZkDef4rsn1QCaxFucjYEN9/HOXTRZiNARuvvQ/wNath/8fyaknQAAAABJRU5ErkJggg==" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0BAMAAADP4xsBAAAAMFBMVEX////i7ub/1gr+1grpzQ/Ewi2Ou5N6rnp5p1VWnG9Ij0UzhDkjfj8cej0bej0PKhw+QnT9AAAEfklEQVR42u2bQWgcZRTHfzNpt+ltdhLF4iVNjAl4iWmMNxFF8VipSI/bIikJAW1FUg8Ja8QIYqAqao3ShJ56UeJJEKoLQm3WbdmLiJWaxWMsm48e6rLb3fEwu5uZ2d1kdudNIMvsJTNfkt+8/L/33vfeC6NZhPXRidAROkJ3PfpQ45KlOgHFG1Y0SwTcDK6Lkdne3ertQOpqRmurAyZvq7UgAdRo8ke70Cqww6kWaIGzzGqBVgJxopqiRQ5gqylaiYS3aoIWqhqsJmgZox0cXdhoB2g/8rUSQyoPWrD0s7ribFSCTLVfVosW8FZU4uyGVqJQFWnd1UVwy8+D5zj6S6R1hO4mvy7/uJ6HwuvxE0Mv+uxsLH/t0a/Lufr1YP9rL/hol3yif1h2ZXQ97QPtT+s/llVI21ieV2F5yEYuLOezroTm16VsaOh79rZPfgpHLy+dGBAMmdsAjHzxAJjg5fLK9X+krF4H0N6o3fZMX35aCq0A9Od3Fvq/EkLb84aeMLaxogDKBzJfl1MhoHUDgI+UPLo6rNo6l5IXxEZzdwGsnCx6bOeyMDXzsyTaGXv59NyskkOPu9385kxWDB0z3Pd3/DmLH3TPec/CnXmxkHnJYzbpnBQ6dsEbmpfEAv2Vs56FjFhhpk9r37q2riSXnrTppfF2k5XvcnJyMpN2FA05MasBJhL1LAhZUTTAkWvjvucF7Z4y/V8OhIWuhWY+jLPRVsQKA131xvDQgzJ1yEyu5aEW1Or0XLahuJQK9LtTs3XDy6sAnJQK9MrNqSdODT0KZFayAPqYSN9Ymaz+6MDmTga/IdXc2a686UhWoZWTeiI09MhYWOi+98Oqr/ve9dWE+Wn/M7/95NhB7ZmpveRoZ7Jg3bp9y1J5hX68b4+BRdtDC6CNEWLbfn0Q26QIHaEPELqdQPcPjQI9QkfoCB2hPZ+rpmmafaMpoGSax+CqaT4O3DfNSwClt4fMoYupjq22tk47O7vCTmteGlndZnvl1HrnghTXnE+q31Tm7KdY2QBaf+28qQ9bfl8Lto0L9z7xjNv/rV2sgjad2TjfsYfop73yVJUvrcHsB4PD8zc63sZDnuFYTewCxN4DGE0G0Pqwq+n/zr7YhFjAkHnonnwk2bIvsnA2GLpyDR5x3D9J0Xa2XNBAX+x/E23RsRCr/tcKBQYsmqZ5rHOtZ066G+hv5NKTe8h0hoe1IY4KjP7cJeswxRTAQFCrFzYMR9oAiBm8BTAGV2Ah37nVw9/jFldP2EIch2JAQUbhP4/YAPRCMRkMfdjAcmXkx6rrCfjs47//8oE2Wn0/CUnPs2rWW0sTzzb/JcOXh7zqSKS1ZwE8lQjs171Q8D4LQP/QNk17p2N0g9i91a9H/jxjED93/cJebZJon6T501qgDjEEmUY3FGaa4C56rTakpd4XrTVpPRxWG8J6ONCasNFOrQ1Zo51oTdZol4cYoka70Jqo0W6/NiSNdqO1oOx46/SkycnR+IpZkDef4rsn1QCaxFucjYEN9/HOXTRZiNARuvvQ/wNath/8fyaknQAAAABJRU5ErkJggg==" />
+  <link rel="manifest" id="appManifest" href="data:application/manifest+json,%7B%22name%22%3A%22Feeder%20Cattle%20P%26L%22%2C%22display%22%3A%22standalone%22%7D" />
+  <title>Feeder Cattle P&amp;L</title>
+  <style>
+    :root {
+      --bg: #f4f6f2;
+      --card: #ffffff;
+      --ink: #1a2e1f;
+      --muted: #5a6b5e;
+      --line: #d5ddd6;
+      --green: #1b7a3d;
+      --green-bg: #e8f6ec;
+      --red: #b42318;
+      --red-bg: #fdecea;
+      --accent: #2d6a4f;
+      --accent-soft: #d8f3dc;
+      --warn: #9a6700;
+      --radius: 12px;
+      --shadow: 0 1px 3px rgba(26, 46, 31, 0.08), 0 4px 16px rgba(26, 46, 31, 0.06);
+      --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --mono: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+      min-height: 100dvh;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 14px 48px;
+    }
+
+    header.app-header {
+      background: linear-gradient(145deg, #1a3a2a 0%, #2d6a4f 100%);
+      color: #fff;
+      padding: 18px 14px 22px;
+      margin: -12px -14px 16px;
+      border-radius: 0 0 18px 18px;
+      box-shadow: var(--shadow);
+    }
+    @media (min-width: 640px) {
+      header.app-header { margin: 0 0 20px; border-radius: var(--radius); }
+      .wrap { padding: 20px 20px 56px; }
+    }
+
+    header h1 {
+      margin: 0 0 4px;
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header .sub {
+      margin: 0;
+      opacity: 0.85;
+      font-size: 0.88rem;
+    }
+
+    .hero-pnl {
+      margin-top: 16px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px 16px;
+    }
+    .hero-pnl .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.8;
+      width: 100%;
+    }
+    .hero-pnl .total {
+      font-size: clamp(1.75rem, 6vw, 2.4rem);
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.03em;
+    }
+    .hero-pnl .perhd {
+      font-size: 1.05rem;
+      font-weight: 600;
+      opacity: 0.95;
+      font-variant-numeric: tabular-nums;
+    }
+    .hero-pnl.pos .total, .hero-pnl.pos .perhd { color: #b7f5c8; }
+    .hero-pnl.neg .total, .hero-pnl.neg .perhd { color: #ffc9c2; }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+      align-items: center;
+    }
+    .tabs {
+      display: inline-flex;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px;
+      box-shadow: var(--shadow);
+    }
+    .tabs button {
+      border: 0;
+      background: transparent;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+    }
+    .tabs button.active {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      font: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-danger:hover { border-color: var(--red); color: var(--red); }
+    .spacer { flex: 1; }
+
+    .scenario-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+
+    .grid-2 {
+      display: grid;
+      gap: 14px;
+    }
+    @media (min-width: 720px) {
+      .grid-2.compare-on { grid-template-columns: 1fr 1fr; }
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 12px 14px;
+      background: var(--accent-soft);
+      border-bottom: 1px solid var(--line);
+    }
+    .panel-head h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: var(--accent);
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 999px;
+    }
+    .panel-body { padding: 12px 14px 14px; }
+
+    .section {
+      margin-bottom: 18px;
+    }
+    .section:last-child { margin-bottom: 0; }
+    .section-title {
+      margin: 0 0 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
+    }
+
+    .fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 12px;
+    }
+    .field.full { grid-column: 1 / -1; }
+    label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .hint {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    input[type="number"], select {
+      width: 100%;
+      font: inherit;
+      font-size: 1rem;
+      font-variant-numeric: tabular-nums;
+      padding: 10px 11px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235a6b5e' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 32px;
+    }
+    input:focus, select:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+      border-color: var(--accent);
+    }
+    input[readonly] {
+      background: #eef2ef;
+      color: var(--muted);
+    }
+
+    .results {
+      display: grid;
+      gap: 10px;
+    }
+    .stat {
+      background: #f8faf8;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+    .stat .k {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .stat .v {
+      font-size: 1.15rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      margin-top: 2px;
+    }
+    .stat .sub {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat.highlight {
+      background: var(--green-bg);
+      border-color: #b7dfc2;
+    }
+    .stat.warn {
+      background: #fff8e6;
+      border-color: #f0d78c;
+    }
+    .stat.pnl-pos { background: var(--green-bg); border-color: #a8d5b5; }
+    .stat.pnl-neg { background: var(--red-bg); border-color: #f0b4ae; }
+    .stat.pnl-pos .v { color: var(--green); }
+    .stat.pnl-neg .v { color: var(--red); }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    @media (min-width: 480px) {
+      .stat-grid.three { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    details.how {
+      margin-top: 8px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      padding: 6px 10px;
+      background: #fafbfa;
+    }
+    details.how summary {
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      list-style: none;
+    }
+    details.how summary::-webkit-details-marker { display: none; }
+    details.how summary::before { content: "▸ "; }
+    details.how[open] summary::before { content: "▾ "; }
+    details.how .formula {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin: 8px 0 4px;
+      font-family: var(--mono);
+      white-space: pre-wrap;
+      line-height: 1.5;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 8px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+    table.sens {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      font-variant-numeric: tabular-nums;
+      min-width: 320px;
+    }
+    table.sens th, table.sens td {
+      padding: 8px 6px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+    table.sens th {
+      background: #eef2ef;
+      font-weight: 700;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      position: sticky;
+      top: 0;
+    }
+    table.sens th.corner { text-align: left; padding-left: 10px; }
+    table.sens td.row-label {
+      text-align: left;
+      font-weight: 600;
+      padding-left: 10px;
+      background: #f8faf8;
+      white-space: nowrap;
+    }
+    table.sens tr:last-child td { border-bottom: 0; }
+    table.sens .pos { color: var(--green); font-weight: 700; }
+    table.sens .neg { color: var(--red); font-weight: 700; }
+    table.sens .base { background: var(--accent-soft); font-weight: 700; }
+
+    footer.note {
+      margin-top: 20px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+      padding: 0 8px;
+    }
+
+    .compare-off .panel-b { display: none; }
+
+    /* Auction bid sheet */
+    .auction-panel {
+      margin-top: 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .auction-panel .panel-head { background: #e8f0ec; }
+    .auction-body { padding: 12px 14px 16px; }
+    .auction-meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    .auction-meta strong { color: var(--ink); }
+    .auction-layout {
+      display: grid;
+      gap: 14px;
+    }
+    @media (min-width: 900px) {
+      .auction-layout { grid-template-columns: 1fr minmax(200px, 240px); align-items: start; }
+    }
+    .auction-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      font-size: 0.78rem;
+      margin: 0 0 8px;
+      color: var(--muted);
+    }
+    .auction-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .swatch {
+      width: 12px; height: 12px;
+      border-radius: 3px;
+      border: 1px solid rgba(0,0,0,0.12);
+      display: inline-block;
+    }
+    .swatch.g { background: var(--green-bg); }
+    .swatch.y { background: #fff3cd; }
+    .swatch.r { background: var(--red-bg); }
+    table.auction {
+      border-collapse: collapse;
+      font-size: 0.72rem;
+      font-variant-numeric: tabular-nums;
+      font-family: var(--mono);
+      min-width: 100%;
+    }
+    table.auction th, table.auction td {
+      border: 1px solid var(--line);
+      padding: 3px 4px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    table.auction th {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    table.auction th.corner, table.auction td.row-label {
+      position: sticky;
+      left: 0;
+      z-index: 1;
+      background: #e8f0ec;
+      color: var(--ink);
+      font-weight: 700;
+      text-align: right;
+      padding-right: 6px;
+    }
+    table.auction th.corner { z-index: 3; background: #1a3a2a; color: #fff; }
+    table.auction th.anchor { background: #52b788; color: #0b2e1c; }
+    table.auction td.hit { background: var(--green-bg); color: var(--green); font-weight: 600; }
+    table.auction td.ok { background: #fff8e6; color: var(--warn); }
+    table.auction td.loss { background: var(--red-bg); color: var(--red); }
+    .auction-scroll {
+      max-height: min(70vh, 560px);
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+    table.maxpay {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      font-variant-numeric: tabular-nums;
+    }
+    table.maxpay th, table.maxpay td {
+      border: 1px solid var(--line);
+      padding: 5px 8px;
+      text-align: right;
+    }
+    table.maxpay th {
+      background: var(--accent-soft);
+      font-size: 0.75rem;
+      text-align: center;
+    }
+    table.maxpay td.wt { font-weight: 700; background: #f8faf8; }
+    table.maxpay td.bid { font-weight: 700; color: var(--accent); font-family: var(--mono); }
+    /* Beef vs Holstein max-pay chart */
+    .maxpay-compare-block {
+      margin: 0 0 16px;
+      padding: 12px 12px 14px;
+      background: #f7faf8;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .maxpay-compare-block .section-title { margin: 0 0 4px; }
+    .maxpay-compare-block .chart-sub {
+      margin: 0 0 10px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .maxpay-chart-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 6px 4px;
+      margin-bottom: 10px;
+    }
+    .maxpay-chart {
+      width: 100%;
+      height: auto;
+      display: block;
+      min-height: 200px;
+      max-height: 320px;
+    }
+    .maxpay-chart-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 4px 0 6px;
+      padding: 0 4px;
+    }
+    .maxpay-chart-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+    }
+    .maxpay-chart-legend .ln {
+      width: 22px;
+      height: 0;
+      border-top: 3px solid;
+      border-radius: 2px;
+      display: inline-block;
+    }
+    .maxpay-chart-legend .ln.beef { border-color: #2d6a4f; }
+    .maxpay-chart-legend .ln.hol { border-color: #c45c26; }
+    table.maxpay.compare td.beef { color: #2d6a4f; font-weight: 700; font-family: var(--mono); }
+    table.maxpay.compare td.hol { color: #c45c26; font-weight: 700; font-family: var(--mono); }
+    table.maxpay.compare td.diff { font-family: var(--mono); color: var(--muted); }
+    table.maxpay.compare tr.hi td.diff { color: var(--ink); font-weight: 700; }
+    .maxpay-chart-note {
+      margin: 6px 0 0;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+
+    /* Market averages panel */
+    .market-avg-panel {
+      margin: 0 0 16px;
+      padding: 12px 12px 14px;
+      background: #f3f7fb;
+      border: 1px solid #c9d7e6;
+      border-radius: 12px;
+    }
+    .market-avg-panel .section-title { margin: 0 0 4px; color: #2c5282; }
+    .market-avg-panel .chart-sub {
+      margin: 0 0 10px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .market-avg-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+    }
+    table.market-avg {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      font-variant-numeric: tabular-nums;
+      min-width: 320px;
+    }
+    table.market-avg th, table.market-avg td {
+      padding: 7px 8px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+    table.market-avg th {
+      background: #e8eef6;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #3d5a80;
+    }
+    table.market-avg td.band {
+      text-align: left;
+      font-weight: 700;
+      background: #f8fafc;
+      white-space: nowrap;
+    }
+    table.market-avg tr:last-child td { border-bottom: 0; }
+    table.market-avg tr.hi td { background: #e8f6ec; }
+    table.market-avg tr.hi td.band { background: #d8f3dc; }
+    .market-avg-foot {
+      margin: 8px 0 0;
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .market-hint {
+      margin: 6px 0 0;
+      font-size: 0.8rem;
+      color: #2c5282;
+      font-weight: 600;
+    }
+    .market-hint .muted { font-weight: 400; color: var(--muted); }
+    .btn-market {
+      margin-top: 8px;
+      width: 100%;
+      border: 1px solid #9bb4d0;
+      background: #e8eef6;
+      color: #1a365d;
+      font: inherit;
+      font-size: 0.86rem;
+      font-weight: 700;
+      padding: 10px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn-market:hover { border-color: #2c5282; background: #dbe7f3; }
+    .maxpay-chart-legend .ln.mkt-beef {
+      border-color: #3d5a80;
+      border-top-style: dashed;
+      border-top-width: 2px;
+    }
+    .maxpay-chart-legend .ln.mkt-hol {
+      border-color: #9a3412;
+      border-top-style: dashed;
+      border-top-width: 2px;
+    }
+
+    .auction-xlsx {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin: 10px 0 0;
+    }
+
+    .welcome-strip {
+      background: #fff8e6;
+      border: 1px solid #f0d78c;
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.5;
+      box-shadow: var(--shadow);
+    }
+    .welcome-strip ol {
+      margin: 6px 0 0;
+      padding-left: 1.25rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .welcome-strip li { margin: 2px 0; }
+    .welcome-strip strong { color: var(--accent); }
+
+    .hero-interp {
+      width: 100%;
+      margin-top: 6px;
+      font-size: 0.9rem;
+      opacity: 0.92;
+      font-weight: 500;
+    }
+
+    .section-title {
+      font-size: 0.95rem !important;
+      letter-spacing: 0.02em !important;
+      text-transform: none !important;
+    }
+
+    label {
+      font-size: 0.85rem !important;
+    }
+    input[type="number"], select {
+      min-height: 48px;
+      padding: 12px 12px !important;
+      font-size: 1.05rem !important;
+    }
+    .tabs button {
+      padding: 10px 16px !important;
+      min-height: 44px;
+    }
+    .btn {
+      padding: 10px 16px !important;
+      min-height: 44px;
+    }
+
+    .maxpay-hero {
+      order: -1;
+    }
+    @media (min-width: 900px) {
+      .auction-layout {
+        grid-template-columns: minmax(220px, 280px) 1fr;
+        align-items: start;
+      }
+      .maxpay-hero { order: 0; }
+    }
+    table.maxpay th, table.maxpay td {
+      padding: 8px 10px !important;
+      font-size: 0.9rem !important;
+    }
+    table.maxpay td.bid {
+      font-size: 1.05rem !important;
+    }
+    table.maxpay tr.hi td {
+      background: #e8f5e9;
+      font-weight: 700;
+    }
+    table.maxpay tr.hi td.bid {
+      background: #c8e6c9;
+      font-size: 1.15rem !important;
+    }
+
+    details.auction-grid-details {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0;
+      background: #fafbfa;
+    }
+    details.auction-grid-details > summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 12px 14px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--accent);
+    }
+    details.auction-grid-details > summary::-webkit-details-marker { display: none; }
+    details.auction-grid-details > summary::before { content: "▸ "; }
+    details.auction-grid-details[open] > summary::before { content: "▾ "; }
+    details.auction-grid-details .grid-inner {
+      padding: 0 10px 12px;
+    }
+    @media (min-width: 900px) {
+      details.auction-grid-details { background: transparent; border: 0; }
+      details.auction-grid-details > summary { display: none; }
+      details.auction-grid-details .grid-inner { padding: 0; }
+    }
+
+    /* Live Cattle futures board */
+    .futures-board {
+      background: #f0f7f2;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px 12px;
+      margin-bottom: 12px;
+    }
+    .futures-board .fb-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 4px 12px;
+      margin-bottom: 8px;
+    }
+    .futures-board .fb-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .futures-board .fb-asof {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .futures-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 6px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 4px;
+      scroll-snap-type: x proximity;
+    }
+    .futures-cell {
+      flex: 0 0 auto;
+      min-width: 4.6rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 6px;
+      text-align: center;
+      scroll-snap-align: start;
+    }
+    .futures-cell.selected {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(45, 106, 79, 0.25);
+      background: var(--accent-soft);
+    }
+    .futures-cell .m {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .futures-cell .p {
+      font-size: 1.05rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      color: var(--ink);
+      margin-top: 2px;
+    }
+    .futures-pick {
+      margin-top: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+    .futures-pick .muted { font-weight: 500; color: var(--muted); font-size: 0.8rem; }
+    .futures-suggest {
+      margin-top: 8px;
+      background: var(--green-bg);
+      border: 1px solid #b7dfc2;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .futures-suggest .sub {
+      font-weight: 500;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .futures-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .btn-accent:hover { color: #fff; filter: brightness(1.08); }
+    .lock-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      margin: 0;
+    }
+    .lock-row input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      accent-color: var(--accent);
+    }
+    .gf-context {
+      margin-top: 8px;
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .holstein-only.hidden { display: none !important; }
+
+    /* ===== Ring-side live auction mode ===== */
+    .ring-launch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+      min-height: 52px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: #ffd60a;
+      color: #111;
+      font-weight: 900;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      border: 2px solid #111;
+      box-shadow: var(--shadow);
+    }
+    .ring-launch:hover, .ring-launch:focus { filter: brightness(1.05); outline: 3px solid #fff; outline-offset: 2px; }
+    .ring-launch .rl-sub { font-weight: 600; font-size: 0.82rem; }
+    .btn.btn-ring {
+      background: #111;
+      color: #ffd60a;
+      border-color: #111;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 800;
+    }
+    .btn.btn-ring:hover { color: #fff; border-color: #111; }
+
+    .ring[hidden] { display: none !important; }
+    body.ring-mode { background: #fff; }
+    body.ring-mode .wrap { display: none !important; }
+    .ring {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 10px calc(28px + env(safe-area-inset-bottom));
+      color: #0b0f0c;
+      font-size: 16px;
+    }
+    .ring-top {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #0f2a1c;
+      color: #fff;
+      margin: 0 -10px 8px;
+      padding: calc(6px + env(safe-area-inset-top)) 10px 6px;
+    }
+    .ring-top .ring-back {
+      min-height: 44px;
+      padding: 6px 12px;
+      border-radius: 10px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      font: inherit;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    .ring-top .ring-title {
+      flex: 1;
+      min-width: 0;
+      text-align: center;
+      line-height: 1.05;
+    }
+    .ring-top .rt-name { display: block; font-size: 0.66rem; font-weight: 900; letter-spacing: 0.1em; color: #cfe3d6; }
+    .ring-top .rt-max {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #ffd60a;
+      font-variant-numeric: tabular-nums;
+    }
+    .ring-top .rt-dot { width: 14px; height: 14px; border-radius: 50%; background: #6b7a70; border: 2px solid #fff; display: inline-block; }
+    .ring-top .rt-dot.st-green { background: #17c653; }
+    .ring-top .rt-dot.st-yellow { background: #ffd60a; }
+    .ring-top .rt-dot.st-red { background: #ff2d3a; }
+    .ring-top .ring-prog-mini {
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      background: #ffd60a;
+      color: #111;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+    .ring-assume {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: #1a1a1a;
+      margin: 0 0 8px;
+      line-height: 1.3;
+      background: #f1f4f2;
+      border: 1px solid #b9c4bc;
+      border-radius: 10px;
+      padding: 2px 4px 2px 10px;
+      min-height: 40px;
+    }
+    .ring-assume .ra-text { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+    .ring-assume.open .ra-text { white-space: normal; }
+    .ring-assume a {
+      color: #0047ab;
+      font-weight: 900;
+      white-space: nowrap;
+      padding: 8px 8px;
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .ring-grid { display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
+    .ring-grid > * { min-width: 0; }
+    @media (min-width: 760px) {
+      .ring { padding-left: 16px; padding-right: 16px; }
+      .ring-top { margin-left: -16px; margin-right: -16px; padding-left: 16px; padding-right: 16px; }
+      .ring-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-areas: "lot bid" "max bid" "log log";
+        align-items: start;
+      }
+      .ring-lot { grid-area: lot; }
+      .ring-max { grid-area: max; }
+      .ring-bid { grid-area: bid; }
+      .ring-log { grid-area: log; }
+    }
+    @media (min-width: 1100px) {
+      .ring-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-areas: "lot bid log" "max bid log";
+        grid-template-rows: auto 1fr;
+      }
+      .ring-log { align-self: stretch; }
+    }
+    .ring-card {
+      background: #fff;
+      border: 2px solid #1d2b22;
+      border-radius: 14px;
+      padding: 10px 12px 12px;
+    }
+    .ring label {
+      display: block;
+      font-size: 0.8rem !important;
+      font-weight: 900;
+      color: #111;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 4px;
+    }
+    .ring .ring-in {
+      width: 100%;
+      min-width: 0;
+      font: inherit;
+      font-size: 2rem;
+      font-weight: 900;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+      padding: 4px 6px;
+      min-height: 58px;
+      border: 2px solid #1d2b22;
+      border-radius: 10px;
+      background: #fff;
+      color: #000;
+    }
+    .ring .ring-in:focus { outline: 3px solid #0047ab; outline-offset: 1px; }
+    .ring-btn {
+      min-height: 56px;
+      min-width: 0;
+      font: inherit;
+      font-size: 1.25rem;
+      font-weight: 900;
+      border: 2px solid #1d2b22;
+      border-radius: 10px;
+      background: #e9efea;
+      color: #000;
+      cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .ring-btn:active { transform: scale(0.96); background: #cfdcd2; }
+    .ring-stepper { display: grid; grid-template-columns: 76px 1fr 76px; gap: 6px; }
+    .ring-stepper.sm { grid-template-columns: 46px minmax(0, 1fr) 46px; gap: 4px; }
+    .ring-stepper.sm .ring-btn { min-height: 50px; }
+    .ring .ring-in.sm { font-size: 1.45rem; min-height: 50px; padding: 2px; }
+    .ring-row2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; margin-top: 6px; }
+    .ring-seg {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .ring-seg button {
+      min-height: 50px;
+      font: inherit;
+      font-size: 0.98rem;
+      font-weight: 900;
+      line-height: 1.1;
+      padding: 4px 4px;
+      border: 2px solid #1d2b22;
+      border-radius: 10px;
+      background: #fff;
+      color: #111;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+    .ring-seg.tight { margin-top: 0; gap: 4px; }
+    .ring-seg.tight button { min-height: 50px; font-size: 0.92rem; }
+    .ring-seg button[aria-pressed="true"] { background: #0f2a1c; color: #ffd60a; }
+    .ring-seg button:disabled { opacity: 0.45; }
+
+    .ring-max {
+      background: #0f2a1c;
+      color: #fff;
+      border-color: #0f2a1c;
+    }
+    .ring-max .rm-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .ring-max .k {
+      font-size: 0.85rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffd60a;
+    }
+    .ring-max .rm-goal { font-size: 0.82rem; font-weight: 700; color: #e6efe9; }
+    .ring-max .rm-main { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; column-gap: 10px; }
+    .ring-max .big {
+      font-size: clamp(2.5rem, 12.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.02;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+    .ring-max .big small, .ring-pnl small { font-size: 0.4em; font-weight: 800; letter-spacing: 0; margin-left: 2px; }
+    .ring-max .rm-hd { font-size: clamp(1.25rem, 5.6vw, 1.6rem); font-weight: 900; font-variant-numeric: tabular-nums; }
+    .ring-kv {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .ring-kv > div {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 10px;
+      padding: 4px 8px;
+      min-width: 0;
+    }
+    .ring-kv .k { color: #ffd60a; font-size: 0.72rem; display: block; }
+    .ring-kv .v {
+      display: block;
+      font-size: clamp(1.25rem, 6vw, 1.6rem);
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.15;
+    }
+    .ring-kv .s { display: block; font-size: 0.74rem; font-weight: 600; color: #e6efe9; }
+
+    .ring-bid { transition: background-color 0.12s ease; }
+    .ring-bid.st-none { background: #f3f5f4; }
+    .ring-bid.st-green { background: #087a32; border-color: #04411a; color: #fff; }
+    .ring-bid.st-yellow { background: #ffd60a; border-color: #6b5400; color: #000; }
+    .ring-bid.st-red { background: #c1121f; border-color: #6d0911; color: #fff; }
+    .ring-bid label { color: inherit !important; }
+    .ring-bid .ring-in { font-size: 2.5rem; min-height: 62px; padding: 0 6px; }
+    .ring-bidbtns { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 6px; }
+    .ring-bidbtns .ring-btn { min-height: 54px; font-size: 1.35rem; background: #fff; }
+    .ring-status {
+      margin-top: 6px;
+      text-align: center;
+      font-size: clamp(1.35rem, 6.5vw, 1.9rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+    .ring-status-sub {
+      text-align: center;
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-top: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+    .ring-pnl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; margin-top: 6px; }
+    .ring-pnl > div {
+      background: rgba(255,255,255,0.92);
+      color: #000;
+      border: 2px solid rgba(0,0,0,0.55);
+      border-radius: 10px;
+      padding: 3px 6px;
+      text-align: center;
+      min-width: 0;
+    }
+    .ring-pnl .k { display: block; font-size: 0.74rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.05em; }
+    .ring-pnl .v {
+      display: block;
+      font-size: clamp(1.45rem, 7vw, 2.1rem);
+      font-weight: 900;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.1;
+      overflow-wrap: anywhere;
+    }
+    .ring-pnl .v.pos { color: #05631f; }
+    .ring-pnl .v.neg { color: #a50e18; }
+    .ring-pnl .s { display: block; font-size: 0.74rem; font-weight: 700; color: #222; }
+    .ring-actions { display: grid; grid-template-columns: 76px minmax(0, 2fr) minmax(0, 1fr); gap: 8px; margin-top: 8px; align-items: stretch; }
+    .ring-actions .ra-lot label { font-size: 0.66rem !important; margin: 0 0 1px; color: inherit !important; }
+    .ring .ring-actions .ra-lot .ring-in { font-size: 1.15rem; min-height: 42px; padding: 2px; }
+    .ring-actions button {
+      min-height: 60px;
+      font: inherit;
+      font-size: 1.3rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      border-radius: 12px;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+    .ring-actions .ra-bought { background: #111; color: #fff; border: 3px solid #fff; box-shadow: 0 0 0 2px #111; }
+    .ring-actions .ra-pass { background: #fff; color: #111; border: 2px solid #111; }
+    .ring-actions button:active { transform: scale(0.97); }
+
+    .ring-log .ring-note#ringAssumeFull { background: #f1f4f2; border-radius: 8px; padding: 6px 8px; }
+    .ring-log h2 { margin: 0; font-size: 1.15rem; font-weight: 900; }
+    .ring-log-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+    .ring-target { display: flex; align-items: center; gap: 6px; font-weight: 800; font-size: 0.9rem; }
+    .ring-target .ring-in { width: 92px; font-size: 1.3rem; min-height: 46px; }
+    .ring-progress {
+      position: relative;
+      height: 30px;
+      border: 2px solid #1d2b22;
+      border-radius: 999px;
+      background: #eef2ef;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .ring-progress .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: #1b7a3d; transition: width 0.2s ease; }
+    .ring-progress .txt {
+      position: relative;
+      display: block;
+      text-align: center;
+      line-height: 26px;
+      font-weight: 900;
+      font-size: 0.95rem;
+      color: #000;
+      text-shadow: 0 0 3px #fff, 0 0 3px #fff;
+      font-variant-numeric: tabular-nums;
+    }
+    .ring-totals {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .ring-totals > div {
+      border: 1px solid #9fb0a4;
+      border-radius: 10px;
+      padding: 5px 6px;
+      background: #f6f8f7;
+      min-width: 0;
+    }
+    .ring-totals .k { display: block; font-size: 0.68rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.04em; color: #222; }
+    .ring-totals .v { display: block; font-size: 1.12rem; font-weight: 900; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+    .ring-totals .v.pos { color: #05631f; }
+    .ring-totals .v.neg { color: #a50e18; }
+    .ring-log-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .ring-log-actions button {
+      flex: 1 1 auto;
+      min-height: 46px;
+      font: inherit;
+      font-weight: 800;
+      font-size: 0.92rem;
+      border: 2px solid #1d2b22;
+      border-radius: 10px;
+      background: #fff;
+      color: #111;
+      cursor: pointer;
+      padding: 6px 10px;
+    }
+    .ring-log-actions .danger { color: #a50e18; border-color: #a50e18; }
+    .ring-list { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
+    .ring-list li {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 6px;
+      align-items: center;
+      border: 1px solid #9fb0a4;
+      border-left: 8px solid #1b7a3d;
+      border-radius: 10px;
+      padding: 6px 8px;
+      font-size: 0.92rem;
+      line-height: 1.3;
+      font-variant-numeric: tabular-nums;
+    }
+    .ring-list li.pass { border-left-color: #8a8f8b; background: #f6f6f6; color: #333; }
+    .ring-list .l1 { font-weight: 900; }
+    .ring-list .l2 { font-size: 0.84rem; color: #222; }
+    .ring-list .pos { color: #05631f; font-weight: 900; }
+    .ring-list .neg { color: #a50e18; font-weight: 900; }
+    .ring-list .del {
+      min-width: 44px;
+      min-height: 44px;
+      border: 1px solid #9fb0a4;
+      background: #fff;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: #444;
+      cursor: pointer;
+    }
+    .ring-empty { margin: 8px 0 0; color: #333; font-size: 0.9rem; }
+    .ring-note { font-size: 0.76rem; color: #333; margin: 8px 0 0; line-height: 1.35; }
+    .ring-toast {
+      position: fixed;
+      left: 50%;
+      bottom: calc(18px + env(safe-area-inset-bottom));
+      transform: translateX(-50%);
+      background: #111;
+      color: #fff;
+      font-weight: 900;
+      padding: 12px 18px;
+      border-radius: 12px;
+      z-index: 50;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+      max-width: calc(100vw - 24px);
+      text-align: center;
+    }
+    .ring-toast[hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="app-header">
+      <h1>Feeder Cattle P&amp;L</h1>
+      <p class="sub">What can I pay for feeders and still make money? · Western WI</p>
+      <div class="hero-pnl" id="heroPnl">
+        <div class="label">Projected profit / loss</div>
+        <div class="total" id="heroTotal">—</div>
+        <div class="perhd" id="heroPerHd">—</div>
+        <div class="hero-interp" id="heroInterp">Set your numbers below to see a projection.</div>
+      </div>
+      <a class="ring-launch" href="#ring" id="ringLaunch">RING-SIDE MODE &rsaquo; <span class="rl-sub">live auction bidding</span></a>
+    </header>
+
+    <div class="welcome-strip" id="welcomeStrip">
+      <strong>Quick start</strong>
+      <ol>
+        <li>Set your sale &amp; feed numbers</li>
+        <li>Check <strong>Max I can pay</strong></li>
+        <li>Use the auction grid when bidding</li>
+      </ol>
+    </div>
+
+    <div class="toolbar">
+      <div class="tabs" role="tablist" aria-label="Cattle type scenarios">
+        <button type="button" class="active" id="tabA" role="tab" aria-selected="true">Beef</button>
+        <button type="button" id="tabB" role="tab" aria-selected="false">Holstein</button>
+        <button type="button" id="tabBoth" role="tab" aria-selected="false">Compare</button>
+      </div>
+      <a class="btn btn-ring" href="#ring">Ring-side &rsaquo;</a>
+      <span class="spacer"></span>
+      <button type="button" class="btn btn-danger" id="resetBtn">Reset defaults</button>
+    </div>
+    <p class="scenario-note" id="scenarioNote">Editing Beef setup. Numbers save automatically on this phone/computer.</p>
+
+    <div class="grid-2 compare-off" id="panels">
+      <div class="panel panel-a" id="panelA">
+        <div class="panel-head">
+          <h2>Beef</h2>
+          <span class="badge" id="badgeA">Beef</span>
+        </div>
+        <div class="panel-body" data-scenario="A"></div>
+      </div>
+      <div class="panel panel-b" id="panelB">
+        <div class="panel-head">
+          <h2>Holstein</h2>
+          <span class="badge" id="badgeB">Better Holstein</span>
+        </div>
+        <div class="panel-body" data-scenario="B"></div>
+      </div>
+    </div>
+
+
+    <section class="auction-panel" id="auctionBidSheet" aria-label="What I can pay at auction">
+      <div class="panel-head">
+        <h2>What I can pay</h2>
+        <span class="badge" id="auctionSourceBadge">Beef</span>
+      </div>
+      <div class="auction-body">
+        <p class="auction-meta" id="auctionMeta">
+          Updates when you change numbers above. Use <strong>Max I can pay</strong> at the sale barn.
+        </p>
+        <div class="auction-legend">
+          <span><i class="swatch g"></i> Hits profit goal</span>
+          <span><i class="swatch y"></i> Still makes money</span>
+          <span><i class="swatch r"></i> Loses money</span>
+        </div>
+
+        <div class="market-avg-panel" id="marketAvgPanel">
+          <h3 class="section-title">Market averages by breed (week of Sep 10–17, 2026)</h3>
+          <p class="chart-sub">Beef-breed Med/Lg 1 vs Holstein/dairy steers by weight. “Use market avg” applies the breed matching your cattle type.</p>
+          <div class="market-avg-scroll">
+            <table class="market-avg" id="marketAvgTable">
+              <thead>
+                <tr>
+                  <th>Weight band</th>
+                  <th>Beef steer $/cwt</th>
+                  <th>Holstein steer $/cwt</th>
+                  <th>Beef heifer $/cwt</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <p class="market-avg-foot" id="marketAvgFoot"></p>
+        </div>
+
+        <div class="maxpay-compare-block" id="maxPayCompareBlock">
+          <h3 class="section-title">Max I can pay by weight</h3>
+          <p class="chart-sub">Beef vs Holstein — highest buy $/cwt to hit your profit goal (same grow costs; Holstein sale uses finish discount).</p>
+          <div class="maxpay-chart-card">
+            <div class="maxpay-chart-legend" aria-hidden="true">
+              <span><i class="ln beef"></i> Beef max</span>
+              <span><i class="ln hol"></i> Holstein max</span>
+              <span><i class="ln mkt-beef"></i> Beef market</span>
+              <span><i class="ln mkt-hol"></i> Holstein market</span>
+            </div>
+            <div id="maxPayChart" class="maxpay-chart" role="img" aria-label="Max bid by purchase weight for Beef and Holstein"></div>
+            <p class="maxpay-chart-note" id="maxPayChartNote"></p>
+          </div>
+          <div class="auction-scroll" style="max-height:min(40vh,320px);margin-bottom:4px">
+            <table class="maxpay compare" id="maxPayCompareTable">
+              <thead>
+                <tr>
+                  <th>Weight</th>
+                  <th>Beef max $/cwt</th>
+                  <th>Holstein max $/cwt</th>
+                  <th>Difference</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="auction-layout">
+          <div class="maxpay-hero">
+            <h3 class="section-title" style="margin:0 0 6px">Max I can pay <span style="font-weight:600;color:var(--muted);font-size:0.85rem">(active tab)</span></h3>
+            <p style="margin:0 0 8px;font-size:0.82rem;color:var(--muted)">Highest buy price ($ per 100 lb) for the selected scenario. 600 / 700 / 800 lb highlighted.</p>
+            <div class="auction-scroll" style="max-height:min(70vh,560px)">
+              <table class="maxpay" id="auctionMaxPay">
+                <thead>
+                  <tr><th>Weight</th><th>Max $/cwt</th><th>$/head</th><th>Breakeven</th></tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <details class="auction-grid-details" id="auctionGridDetails">
+              <summary>Show full auction grid (profit per head)</summary>
+              <div class="grid-inner">
+                <h3 class="section-title" style="margin:8px 0 6px">Profit at auction</h3>
+                <p style="margin:0 0 6px;font-size:0.78rem;color:var(--muted)">Find weight row, then buy price column. Cell = profit per head. Buy price is $/cwt (per 100 lb).</p>
+                <div class="auction-scroll" id="auctionGridWrap">
+                  <table class="auction" id="auctionGrid">
+                    <thead></thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+        <p class="auction-xlsx" id="auctionXlsx">Printable Excel sheet: <code>Feeder-Auction-Bid-Sheet.xlsx</code> in this folder.</p>
+      </div>
+    </section>
+
+    <footer class="note">
+      Works offline · your numbers stay on this device · not financial advice.
+      Live Cattle futures <span id="footFuturesAsOf">as of Oct 2, 2026 settle (CME via Farmbucks)</span> — auto-updates when online, override anytime. Feeder cash market averages as of Sep 17, 2026 (Med/Lg 1 auctions) — use as buy-side reference only.
+    </footer>
+  </div>
+
+  <!-- ===== Ring-side live auction mode (index.html#ring) — manual entry only ===== -->
+  <section class="ring" id="ringside" aria-label="Ring-side live auction mode" hidden>
+    <div class="ring-top">
+      <a class="ring-back" id="ringBack" href="#calc" aria-label="Back to calculator">&larr; Calc</a>
+      <div class="ring-title"><span class="rt-name">RING-SIDE &middot; MAX BID</span><span class="rt-max"><i class="rt-dot" id="ringDot"></i><span id="ringMiniMax">—</span></span></div>
+      <div class="ring-prog-mini" id="ringProgMini" title="Head bought / target">0 / 100 hd</div>
+    </div>
+    <div class="ring-assume" id="ringAssumeWrap"><span class="ra-text" id="ringAssume" title="Tap to show all assumptions">—</span><a href="#calc" id="ringEdit" data-kind="A">Edit &rsaquo;</a></div>
+
+    <div class="ring-grid">
+        <div class="ring-card ring-lot">
+          <label for="ringWt">Avg weight &mdash; lb / head</label>
+          <div class="ring-stepper">
+            <button type="button" class="ring-btn" data-ring-wt="-25" aria-label="Weight minus 25 lb">&minus;25</button>
+            <input class="ring-in" id="ringWt" type="text" inputmode="decimal" enterkeyhint="done" autocomplete="off" aria-label="Average weight per head in pounds" />
+            <button type="button" class="ring-btn" data-ring-wt="25" aria-label="Weight plus 25 lb">+25</button>
+          </div>
+          <div class="ring-row2">
+            <div>
+              <label for="ringHead">Head</label>
+              <div class="ring-stepper sm">
+                <button type="button" class="ring-btn" data-ring-hd="-1" aria-label="One less head">&minus;</button>
+                <input class="ring-in sm" id="ringHead" type="text" inputmode="numeric" enterkeyhint="done" autocomplete="off" />
+                <button type="button" class="ring-btn" data-ring-hd="1" aria-label="One more head">+</button>
+              </div>
+            </div>
+            <div>
+              <label>Sex</label>
+              <div class="ring-seg tight" id="ringSex" role="group" aria-label="Sex">
+                <button type="button" data-v="steer" aria-pressed="true">Steers</button>
+                <button type="button" data-v="heifer" aria-pressed="false">Heifers</button>
+              </div>
+            </div>
+          </div>
+          <div class="ring-seg" id="ringBreed" role="group" aria-label="Breed">
+            <button type="button" data-v="beef" aria-pressed="true">Beef</button>
+            <button type="button" data-v="beefOnDairy" aria-pressed="false">Beef-on-<br>dairy</button>
+            <button type="button" data-v="holstein" aria-pressed="false">Holstein</button>
+          </div>
+        </div>
+
+        <div class="ring-card ring-max" id="ringMaxCard">
+          <div class="rm-top">
+            <span class="k">Max bid</span>
+            <span class="rm-goal" id="ringGoal">for $50/hd profit</span>
+          </div>
+          <div class="rm-main"><div class="big" id="ringMaxCwt">—</div><div class="rm-hd" id="ringMaxHd">—</div></div>
+          <div class="ring-kv">
+            <div>
+              <span class="k">Breakeven</span>
+              <span class="v" id="ringBe">—</span>
+              <span class="s" id="ringBeHd">$0 profit</span>
+            </div>
+            <div>
+              <span class="k">Market avg</span>
+              <span class="v" id="ringMkt">—</span>
+              <span class="s" id="ringMktNote">—</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ring-card ring-bid st-none" id="ringBidCard">
+          <label for="ringBid">Current bid &mdash; $ / cwt</label>
+          <input class="ring-in" id="ringBid" type="text" inputmode="decimal" enterkeyhint="done" autocomplete="off" placeholder="—" aria-label="Current bid in dollars per hundredweight" />
+          <div class="ring-bidbtns">
+            <button type="button" class="ring-btn" data-ring-bid="-5">&minus;5</button>
+            <button type="button" class="ring-btn" data-ring-bid="-1">&minus;1</button>
+            <button type="button" class="ring-btn" data-ring-bid="1">+1</button>
+            <button type="button" class="ring-btn" data-ring-bid="5">+5</button>
+          </div>
+          <div class="ring-status" id="ringStatus" role="status" aria-live="polite">Enter the bid</div>
+          <div class="ring-status-sub" id="ringStatusSub">&nbsp;</div>
+          <div class="ring-pnl">
+            <div>
+              <span class="k">Profit / hd</span>
+              <span class="v" id="ringPHd">—</span>
+              <span class="s" id="ringCostHd">at this bid</span>
+            </div>
+            <div>
+              <span class="k">Lot total</span>
+              <span class="v" id="ringPTot">—</span>
+              <span class="s" id="ringLotCost">—</span>
+            </div>
+          </div>
+          <div class="ring-actions">
+            <div class="ra-lot"><label for="ringLot">Lot #</label><input class="ring-in" id="ringLot" type="text" inputmode="numeric" enterkeyhint="done" autocomplete="off" placeholder="opt." /></div>
+            <button type="button" class="ra-bought" id="ringBought">BOUGHT</button>
+            <button type="button" class="ra-pass" id="ringPass">PASS</button>
+          </div>
+        </div>
+
+        <div class="ring-card ring-log">
+          <div class="ring-log-head">
+            <h2>Sale log</h2>
+            <label class="ring-target" for="ringTarget" style="text-transform:none;letter-spacing:0;margin:0">
+              Target <input class="ring-in" id="ringTarget" type="text" inputmode="numeric" autocomplete="off" /> hd
+            </label>
+          </div>
+          <div class="ring-progress" aria-hidden="true"><div class="bar" id="ringBar"></div><span class="txt" id="ringProgText">0 / 100 hd</span></div>
+          <div class="ring-totals">
+            <div><span class="k">Head bought</span><span class="v" id="ringTHead">0</span></div>
+            <div><span class="k">Avg weight</span><span class="v" id="ringTWt">—</span></div>
+            <div><span class="k">Avg price</span><span class="v" id="ringTPrice">—</span></div>
+            <div><span class="k">Total $</span><span class="v" id="ringTCost">—</span></div>
+            <div><span class="k">Proj. profit</span><span class="v" id="ringTProfit">—</span></div>
+            <div><span class="k">Lots B / P</span><span class="v" id="ringTLots">0 / 0</span></div>
+          </div>
+          <div class="ring-log-actions">
+            <button type="button" id="ringCsv">Download CSV</button>
+            <button type="button" id="ringUndo">Undo last</button>
+            <button type="button" class="danger" id="ringClear">Clear log</button>
+          </div>
+          <ol class="ring-list" id="ringList"></ol>
+          <p class="ring-empty" id="ringEmpty">No lots yet. Tap <strong>BOUGHT</strong> or <strong>PASS</strong> as each lot sells.</p>
+          <p class="ring-note" id="ringAssumeFull"></p>
+          <p class="ring-note">Manual entry only &mdash; nothing is read from CattleUSA or any sale site. Total $ = hammer price only (trucking, commission, vet are in the profit math). Log saves on this device only.</p>
+        </div>
+    </div>
+    <div class="ring-toast" id="ringToast" hidden></div>
+  </section>
+
+  <template id="scenarioTemplate">
+    <div class="section">
+      <h3 class="section-title">Buy cattle</h3>
+      <div class="fields">
+        <div class="field">
+          <label>How many head</label>
+          <input type="number" data-key="head" min="1" step="1" />
+        </div>
+        <div class="field">
+          <label>Purchase weight <span class="hint">lb per head</span></label>
+          <input type="number" data-key="purchaseWt" min="1" step="1" />
+        </div>
+        <div class="field full">
+          <label>Cattle type <span class="hint">fills a starting buy price — change anytime</span></label>
+          <select data-key="cattleType">
+            <option value="beef">Beef — $355 / cwt</option>
+            <option value="beefOnDairy">Beef-on-dairy — $340 / cwt</option>
+            <option value="betterHolstein">Better Holstein — $310 / cwt</option>
+            <option value="plainHolstein">Plain Holstein — $215 / cwt</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Sex <span class="hint">beef market avg; Holstein uses steers</span></label>
+          <select data-key="sex">
+            <option value="steer">Steer</option>
+            <option value="heifer">Heifer</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Buy price <span class="hint">$ per 100 lb (cwt)</span></label>
+          <input type="number" data-key="buyCwt" min="0" step="0.01" />
+          <p class="market-hint" data-out="marketHint">—</p>
+          <button type="button" class="btn-market" data-action="useMarketAvg">Use market avg for this weight</button>
+        </div>
+        <div class="field">
+          <label>Trucking in <span class="hint">$ per head</span></label>
+          <input type="number" data-key="truckIn" min="0" step="0.01" />
+        </div>
+        <div class="field">
+          <label>Buy commission <span class="hint">% of purchase</span></label>
+          <input type="number" data-key="buyComm" min="0" step="0.1" />
+        </div>
+        <div class="field">
+          <label>Vet / processing <span class="hint">$ per head at arrival</span></label>
+          <input type="number" data-key="vet" min="0" step="0.01" />
+        </div>
+        <div class="field full">
+          <label>Other buy costs <span class="hint">$ per head — optional</span></label>
+          <input type="number" data-key="otherBuy" min="0" step="0.01" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 class="section-title">Put weight on</h3>
+      <div class="fields">
+        <div class="field">
+          <label>Sale / finish weight <span class="hint">lb per head</span></label>
+          <input type="number" data-key="saleWt" min="1" step="1" />
+        </div>
+        <div class="field">
+          <label>Pounds gained per day <span class="hint">was ADG</span></label>
+          <input type="number" data-key="adg" min="0.01" step="0.1" />
+        </div>
+        <div class="field">
+          <label>Days on feed <span class="hint">auto</span></label>
+          <input type="number" data-key="daysDisplay" readonly tabindex="-1" />
+        </div>
+        <div class="field">
+          <label>Feed cost <span class="hint">$ per lb of gain</span></label>
+          <input type="number" data-key="feedPerLb" min="0" step="0.01" />
+        </div>
+        <div class="field">
+          <label>Yard / facility charge <span class="hint">$ per head per day</span></label>
+          <input type="number" data-key="yardage" min="0" step="0.01" />
+        </div>
+        <div class="field">
+          <label>Death loss <span class="hint">%</span></label>
+          <input type="number" data-key="deathLoss" min="0" max="100" step="0.1" />
+        </div>
+        <div class="field">
+          <label>Interest rate <span class="hint">% per year on purchase</span></label>
+          <input type="number" data-key="interestRate" min="0" step="0.1" />
+        </div>
+        <div class="field">
+          <label>Health while on feed <span class="hint">$ per head</span></label>
+          <input type="number" data-key="health" min="0" step="0.01" />
+        </div>
+        <div class="field">
+          <label>Misc grow costs <span class="hint">$ per head — optional</span></label>
+          <input type="number" data-key="misc" min="0" step="0.01" />
+        </div>
+        <div class="field">
+          <label>Profit goal <span class="hint">$ per head — for max bid</span></label>
+          <input type="number" data-key="targetProfit" step="1" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 class="section-title">Sell / finished cattle</h3>
+
+      <div class="futures-board" data-futures-board>
+        <div class="fb-head">
+          <span class="fb-title">Live Cattle futures (CME LE)</span>
+          <span class="fb-asof" data-out="futuresAsOfLabel">As of Oct 2, 2026 settle</span>
+        </div>
+        <div class="futures-grid" data-out="futuresGrid"></div>
+        <div class="futures-pick" data-out="futuresPick">—</div>
+        <div class="futures-suggest">
+          Suggested sale: <span data-out="suggestedSale">—</span>
+          <div class="sub" data-out="suggestedSaleNote">futures + local basis (you can override)</div>
+        </div>
+        <div class="futures-actions">
+          <button type="button" class="btn btn-accent" data-action="useFutures">Use futures price</button>
+          <label class="lock-row">
+            <input type="checkbox" data-key="lockToFutures" />
+            <span>Lock sale price to futures + basis</span>
+          </label>
+        </div>
+        <p class="gf-context" data-out="gfContext">
+          Feeder Cattle futures (buy-side context only, Oct 2, 2026 settle): Oct GF $334.63 · Nov GF $331.15 — not your sell price.
+        </p>
+        <p class="gf-context" style="margin-top:4px" data-out="lcSourceNote">
+          Live Cattle settlements as of Oct 2, 2026 (CME via Farmbucks). Offline-first — override anytime.
+        </p>
+      </div>
+
+      <div class="fields">
+        <div class="field">
+          <label>Sale price <span class="hint">$ per 100 lb finished</span></label>
+          <input type="number" data-key="sellCwt" min="0" step="0.01" />
+        </div>
+        <div class="field">
+          <label>Local basis <span class="hint">$/cwt · cash vs futures, negative = cash under</span></label>
+          <input type="number" data-key="basis" step="0.1" />
+        </div>
+        <div class="field full holstein-only" data-holstein-discount>
+          <label>Holstein finish discount <span class="hint">$/cwt under beef futures — dairy types only</span></label>
+          <input type="number" data-key="holsteinFinishDiscount" step="0.5" />
+        </div>
+        <div class="field">
+          <label>Trucking out <span class="hint">$ per head</span></label>
+          <input type="number" data-key="truckOut" min="0" step="0.01" />
+        </div>
+        <div class="field">
+          <label>Sale commission <span class="hint">%</span></label>
+          <input type="number" data-key="sellComm" min="0" step="0.1" />
+        </div>
+        <div class="field">
+          <label>Shrink <span class="hint">% off sale weight</span></label>
+          <input type="number" data-key="shrink" min="0" max="100" step="0.1" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 class="section-title">What the numbers say</h3>
+      <div class="results">
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="k">Purchase total</div>
+            <div class="v" data-out="purchaseTotal">—</div>
+            <div class="sub" data-out="purchasePerHd">—</div>
+          </div>
+          <div class="stat">
+            <div class="k">All-in into yard</div>
+            <div class="v" data-out="allInPerHd">—</div>
+            <div class="sub" data-out="allInCwt">—</div>
+          </div>
+        </div>
+
+        <div class="stat-grid three">
+          <div class="stat">
+            <div class="k">Days on feed</div>
+            <div class="v" data-out="days">—</div>
+          </div>
+          <div class="stat">
+            <div class="k">Feed $</div>
+            <div class="v" data-out="feedTotal">—</div>
+            <div class="sub" data-out="feedPerHd">—</div>
+          </div>
+          <div class="stat">
+            <div class="k">Yard / facility $</div>
+            <div class="v" data-out="yardageTotal">—</div>
+            <div class="sub" data-out="yardagePerHd">—</div>
+          </div>
+          <div class="stat">
+            <div class="k">Interest $</div>
+            <div class="v" data-out="interest">—</div>
+            <div class="sub" data-out="interestPerHd">—</div>
+          </div>
+          <div class="stat">
+            <div class="k">Health + misc</div>
+            <div class="v" data-out="feedingOther">—</div>
+            <div class="sub" data-out="feedingOtherPerHd">—</div>
+          </div>
+          <div class="stat">
+            <div class="k">Survivors</div>
+            <div class="v" data-out="survivors">—</div>
+            <div class="sub" data-out="deathNote">—</div>
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="k">Cost of gain</div>
+            <div class="v" data-out="cogPerHd">—</div>
+            <div class="sub" data-out="cogPerLb">—</div>
+          </div>
+          <div class="stat">
+            <div class="k">Pay weight / hd</div>
+            <div class="v" data-out="payWt">—</div>
+            <div class="sub" data-out="netSale">—</div>
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat highlight">
+            <div class="k">Breakeven sale</div>
+            <div class="v" data-out="breakeven">—</div>
+            <div class="sub">$ per 100 lb to break even</div>
+          </div>
+          <div class="stat warn">
+            <div class="k">Max I can pay</div>
+            <div class="v" data-out="maxBuy">—</div>
+            <div class="sub" data-out="maxBuyNote">to hit your profit goal</div>
+          </div>
+        </div>
+
+        <div class="stat" data-out-class="pnlStat">
+          <div class="k">Projected P&amp;L</div>
+          <div class="v" data-out="pnlTotal">—</div>
+          <div class="sub" data-out="pnlPerHd">—</div>
+        </div>
+
+        <details class="how">
+          <summary>How calculated</summary>
+          <div class="formula" data-out="formulaText"></div>
+        </details>
+
+        <div>
+          <h3 class="section-title" style="margin-top:12px">Sensitivity — P&amp;L $/hd</h3>
+          <p style="margin:0 0 6px;font-size:0.78rem;color:var(--muted)">
+            Rows = buy $/cwt · Columns = sell $/cwt · Base case highlighted
+          </p>
+          <div class="table-wrap">
+            <table class="sens">
+              <thead>
+                <tr>
+                  <th class="corner">Buy \ Sell</th>
+                  <th data-out="sensSellM20">−$20</th>
+                  <th data-out="sensSellM10">−$10</th>
+                  <th data-out="sensSell0">Base</th>
+                  <th data-out="sensSellP10">+$10</th>
+                  <th data-out="sensSellP20">+$20</th>
+                </tr>
+              </thead>
+              <tbody data-out="sensBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script>
+(function () {
+  "use strict";
+
+  var STORAGE_KEY = "feederCattlePnL_v1";
+
+  var TYPE_CWT = {
+    beef: 355,
+    beefOnDairy: 340,
+    betterHolstein: 310,
+    plainHolstein: 215
+  };
+
+  var TYPE_LABELS = {
+    beef: "Beef",
+    beefOnDairy: "Beef-on-dairy",
+    betterHolstein: "Better Holstein",
+    plainHolstein: "Plain Holstein"
+  };
+
+  // Embedded CME Live Cattle (LE) settlements — offline-first fallback.
+  // Oct 2, 2026 settles: Farmbucks futures chain (CME data, delayed) = CME final settle Oct 1 + Oct 2 net change;
+  // Dec26/Feb27 cross-checked vs Brownfield Ag News closing report Oct 2, 2026.
+  // When hosted, a newer futures.json next to this page (updated by GitHub Actions) replaces this strip.
+  var DEFAULT_FUTURES_AS_OF = "2026-10-02";
+  var DEFAULT_FUTURES_SOURCE = "CME settlements via Farmbucks (cross-checked Brownfield)";
+  var DEFAULT_LC_FUTURES = [
+    { code: "Oct2026", label: "Oct26", year: 2026, month: 10, price: 218.850 },
+    { code: "Dec2026", label: "Dec26", year: 2026, month: 12, price: 221.475 },
+    { code: "Feb2027", label: "Feb27", year: 2027, month: 2, price: 223.150 },
+    { code: "Apr2027", label: "Apr27", year: 2027, month: 4, price: 224.550 },
+    { code: "Jun2027", label: "Jun27", year: 2027, month: 6, price: 219.700 },
+    { code: "Aug2027", label: "Aug27", year: 2027, month: 8, price: 216.550 },
+    { code: "Oct2027", label: "Oct27", year: 2027, month: 10, price: 215.125 },
+    { code: "Dec2027", label: "Dec27", year: 2027, month: 12, price: 215.600 },
+    { code: "Feb2028", label: "Feb28", year: 2028, month: 2, price: 215.850 },
+    { code: "Apr2028", label: "Apr28", year: 2028, month: 4, price: 216.000 }
+  ];
+  var DEFAULT_GF_CONTEXT =
+    "Feeder Cattle futures (buy-side context only, Oct 2, 2026 settle): Oct GF $334.63 · Nov GF $331.15 — not your sell price.";
+
+  // Active Live Cattle strip used everywhere (embedded, or a newer futures.json / cached copy).
+  var FUTURES_CACHE_KEY = "feederCattleFutures_v1"; // last good futures.json (hosted only); separate from settings
+  var LC_STRIP = {
+    asOf: DEFAULT_FUTURES_AS_OF,
+    source: DEFAULT_FUTURES_SOURCE,
+    priceType: "settle",
+    origin: "embedded",
+    contracts: DEFAULT_LC_FUTURES.slice()
+  };
+
+  // Embedded feeder cash/auction averages — offline-first (refresh from feeder-market-averages-*.csv)
+  var MARKET_AVERAGES = {
+    marketAveragesAsOf: "2026-09-18",
+    weekLabel: "Sep 10–17, 2026",
+    grade: "Beef Med/Lg 1 · Holstein dairy steers (Large 3 / barn)",
+    footnote:
+      "Beef Med/Lg 1: Joplin, OKC, Russell IA, Knoxville IA, Bassett/Kearney/Ogallala NE, Beaver OK, Torrington WY, Sioux Falls SD (Sep 14–17). Holstein steers: East TN AMS_2072 Large 3 (9/11), Pipestone MN (9/10), Premier WI reps (9/15) — thinner; Holstein feeder heifers N/A. Equity Altoona Sep 18 special pending. Not financial advice.",
+    bands: [
+      { band: "300-400", lo: 300, hi: 400 },
+      { band: "400-500", lo: 400, hi: 500 },
+      { band: "500-600", lo: 500, hi: 600 },
+      { band: "600-700", lo: 600, hi: 700 },
+      { band: "700-800", lo: 700, hi: 800 },
+      { band: "800-900", lo: 800, hi: 900 },
+      { band: "900-1000", lo: 900, hi: 1000 }
+    ],
+    beef: {
+      steer: {
+        "300-400": 564.14,
+        "400-500": 483.85,
+        "500-600": 425.68,
+        "600-700": 386.32,
+        "700-800": 362.23,
+        "800-900": 344.14,
+        "900-1000": 323.25
+      },
+      heifer: {
+        "300-400": 491.11,
+        "400-500": 431.24,
+        "500-600": 392.34,
+        "600-700": 355.57,
+        "700-800": 333.85,
+        "800-900": 316.40,
+        "900-1000": 294.18
+      }
+    },
+    holstein: {
+      steer: {
+        "300-400": 369.43,
+        "400-500": 369.12,
+        "500-600": 340.24,
+        "600-700": 320.50,
+        "700-800": 275.33,
+        "800-900": 244.50,
+        "900-1000": 238.00
+      },
+      heifer: null
+    },
+    // retained for research / spreadsheet parity
+    midwest: {
+      steer: {
+        "300-400": 576.42,
+        "400-500": 488.47,
+        "500-600": 430.87,
+        "600-700": 388.57,
+        "700-800": 353.27,
+        "800-900": 336.68,
+        "900-1000": 315.58
+      },
+      heifer: {
+        "300-400": 497.21,
+        "400-500": 425.54,
+        "500-600": 396.76,
+        "600-700": 365.19,
+        "700-800": 320.94,
+        "800-900": 318.77,
+        "900-1000": 291.61
+      }
+    }
+  };
+
+
+
+  var LE_CONTRACT_MONTHS = [2, 4, 6, 8, 10, 12]; // Feb Apr Jun Aug Oct Dec
+  var MONTH_SHORT = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  var MONTH_CODE_LETTERS = { 2: "G", 4: "J", 6: "M", 8: "Q", 10: "V", 12: "Z" };
+
+  /** Validate a futures.json payload; returns a strip object or null. */
+  function parseFuturesJson(d, origin) {
+    try {
+      if (!d || typeof d !== "object" || !Array.isArray(d.contracts)) return null;
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(String(d.asOf || ""))) return null;
+      var out = [];
+      d.contracts.forEach(function (c) {
+        var y = Math.round(Number(c.year)), m = Math.round(Number(c.month)), p = Number(c.price);
+        if (!(y >= 2020 && y <= 2100) || !MONTH_CODE_LETTERS[m] || !(p > 50 && p < 600)) return;
+        out.push({
+          code: MONTH_SHORT[m] + y,
+          label: MONTH_SHORT[m] + String(y).slice(2),
+          year: y,
+          month: m,
+          price: Math.round(p * 1000) / 1000
+        });
+      });
+      if (out.length < 4) return null;
+      out.sort(function (a, b) { return (a.year * 12 + a.month) - (b.year * 12 + b.month); });
+      return {
+        asOf: String(d.asOf),
+        source: String(d.sourceShort || d.source || "futures.json").slice(0, 120),
+        priceType: String(d.priceType || "settle"),
+        origin: origin,
+        contracts: out
+      };
+    } catch (e) { return null; }
+  }
+
+  /** Use a strip only if it is at least as new as the one we have (ISO dates compare as strings). */
+  function adoptStrip(strip) {
+    if (!strip || strip.asOf < LC_STRIP.asOf) return false;
+    if (strip.asOf === LC_STRIP.asOf && strip.priceType !== "settle" && LC_STRIP.priceType === "settle") return false;
+    LC_STRIP = strip;
+    return true;
+  }
+
+  // Previously fetched futures.json (hosted copy) — lets a phone keep the newest strip when it loads offline.
+  try {
+    var cachedStrip = parseFuturesJson(JSON.parse(localStorage.getItem(FUTURES_CACHE_KEY) || "null"), "cache");
+    if (cachedStrip) adoptStrip(cachedStrip);
+  } catch (e) { /* ignore */ }
+
+  function defaultInputs(kind) {
+    var isB = kind === "B";
+    return {
+      head: 100,
+      purchaseWt: 700,
+      cattleType: isB ? "betterHolstein" : "beef",
+      sex: "steer",
+      buyCwt: isB ? 310 : 355,
+      truckIn: 25,
+      buyComm: 2,
+      vet: 25,
+      otherBuy: 0,
+      saleWt: 1400,
+      adg: 3.0,
+      feedPerLb: 1.10,
+      yardage: 0.50,
+      deathLoss: 2,
+      interestRate: 8,
+      health: 15,
+      misc: 0,
+      targetProfit: 50,
+      sellCwt: 215,
+      truckOut: 30,
+      sellComm: 2,
+      shrink: 3,
+      // Live Cattle finish / sell helpers (futures strip itself is global: LC_STRIP)
+      basis: -3,
+      lockToFutures: true, // fresh devices: sale price = futures (lot's finish month) + basis
+      holsteinFinishDiscount: -15
+    };
+  }
+
+  function isHolsteinType(cattleType) {
+    return cattleType === "betterHolstein" || cattleType === "plainHolstein";
+  }
+
+  function lcContractsFromState(inp) {
+    return LC_STRIP.contracts.map(function (c) {
+      return { code: c.code, label: c.label, year: c.year, month: c.month, price: n(c.price) };
+    });
+  }
+
+  function addDays(d, days) {
+    var out = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    out.setDate(out.getDate() + Math.round(days));
+    return out;
+  }
+
+  function fmtDateShort(d) {
+    return MONTH_SHORT[d.getMonth() + 1] + " " + d.getDate() + ", " + d.getFullYear();
+  }
+
+  function idealLeMonth(finishDate) {
+    // Usual hedge: next listed LE month at or after the finish month
+    var y = finishDate.getFullYear();
+    var m = finishDate.getMonth() + 1; // 1-12
+    for (var i = 0; i < LE_CONTRACT_MONTHS.length; i++) {
+      if (LE_CONTRACT_MONTHS[i] >= m) {
+        return { year: y, month: LE_CONTRACT_MONTHS[i] };
+      }
+    }
+    return { year: y + 1, month: 2 };
+  }
+
+  function pickLiveCattleContract(finishDate, contracts) {
+    var ideal = idealLeMonth(finishDate);
+    var idealLabel = MONTH_SHORT[ideal.month] + " " + ideal.year;
+    // Prefer exact match among embedded board
+    var i, c;
+    for (i = 0; i < contracts.length; i++) {
+      c = contracts[i];
+      if (c.year === ideal.year && c.month === ideal.month) {
+        return { contract: c, ideal: ideal, idealLabel: idealLabel, fallback: false, pastEnd: false };
+      }
+    }
+    // Else first embedded contract at or after ideal
+    for (i = 0; i < contracts.length; i++) {
+      c = contracts[i];
+      if (c.year > ideal.year || (c.year === ideal.year && c.month >= ideal.month)) {
+        return { contract: c, ideal: ideal, idealLabel: idealLabel, fallback: true, pastEnd: false };
+      }
+    }
+    // Finish is past our board — use last (furthest) quote we have
+    c = contracts[contracts.length - 1];
+    return { contract: c, ideal: ideal, idealLabel: idealLabel, fallback: true, pastEnd: true };
+  }
+
+  function suggestedSalePrice(inp, pick) {
+    var basis = n(inp.basis);
+    var holDisc = isHolsteinType(inp.cattleType) ? n(inp.holsteinFinishDiscount) : 0;
+    return n(pick.contract.price) + basis + holDisc;
+  }
+
+  function fmtIsoDate(raw, withYear) {
+    var parts = String(raw).split("-");
+    if (parts.length === 3) {
+      var y = +parts[0], m = +parts[1], d = +parts[2];
+      if (y && m && d) return MONTH_SHORT[m] + " " + d + (withYear === false ? "" : ", " + y);
+    }
+    return String(raw);
+  }
+
+  function futuresAsOfLabel() {
+    return "As of " + fmtIsoDate(LC_STRIP.asOf) + (LC_STRIP.priceType === "settle" ? " settle" : " close");
+  }
+
+  function futuresSourceNote() {
+    var first = LC_STRIP.contracts[0], last = LC_STRIP.contracts[LC_STRIP.contracts.length - 1];
+    return "Live Cattle " + first.label + "–" + last.label + " " + (LC_STRIP.priceType === "settle" ? "settlements" : "closes") +
+      " as of " + fmtIsoDate(LC_STRIP.asOf) + " · " + LC_STRIP.source +
+      (LC_STRIP.origin === "embedded" ? " · built into this page" : " · auto-updated (futures.json)") +
+      ". Sale price is yours to override.";
+  }
+
+  var state = {
+    A: defaultInputs("A"),
+    B: defaultInputs("B"),
+    view: "A" // A | B | both
+  };
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      var data = JSON.parse(raw);
+      ["A", "B"].forEach(function (k) {
+        if (!data[k]) return;
+        Object.assign(state[k], data[k]);
+        // Futures prices are global now (LC_STRIP); drop old per-tab copies so saved devices get fresh quotes
+        delete state[k].liveCattleFutures;
+        delete state[k].futuresAsOf;
+        if (state[k].basis == null) state[k].basis = -3;
+        if (state[k].holsteinFinishDiscount == null) state[k].holsteinFinishDiscount = -15;
+        // Respect this device's saved choice; saves from before the lock option existed keep their manual price
+        if (data[k].lockToFutures == null) state[k].lockToFutures = false;
+        state[k].lockToFutures = !!state[k].lockToFutures;
+        if (state[k].sex !== "heifer") state[k].sex = "steer";
+      });
+      if (data.view === "A" || data.view === "B" || data.view === "both") state.view = data.view;
+    } catch (e) { /* ignore */ }
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        A: state.A,
+        B: state.B,
+        view: state.view
+      }));
+    } catch (e) { /* ignore */ }
+  }
+
+  function n(v) {
+    var x = Number(v);
+    return isFinite(x) ? x : 0;
+  }
+
+  function fmtMoney(x, digits) {
+    if (digits == null) digits = 0;
+    var neg = x < 0;
+    var abs = Math.abs(x);
+    var s = abs.toLocaleString("en-US", {
+      minimumFractionDigits: digits,
+      maximumFractionDigits: digits
+    });
+    return (neg ? "-$" : "$") + s;
+  }
+
+  function fmtNum(x, digits) {
+    if (digits == null) digits = 0;
+    return n(x).toLocaleString("en-US", {
+      minimumFractionDigits: digits,
+      maximumFractionDigits: digits
+    });
+  }
+
+  function compute(inp) {
+    var head = Math.max(0, n(inp.head));
+    var purchaseWt = n(inp.purchaseWt);
+    var buyCwt = n(inp.buyCwt);
+    var truckIn = n(inp.truckIn);
+    var buyComm = n(inp.buyComm) / 100;
+    var vet = n(inp.vet);
+    var otherBuy = n(inp.otherBuy);
+    var saleWt = n(inp.saleWt);
+    var adg = Math.max(0.0001, n(inp.adg));
+    var feedPerLb = n(inp.feedPerLb);
+    var yardage = n(inp.yardage);
+    var deathLoss = Math.min(100, Math.max(0, n(inp.deathLoss))) / 100;
+    var interestRate = n(inp.interestRate) / 100;
+    var health = n(inp.health);
+    var misc = n(inp.misc);
+    var targetProfit = n(inp.targetProfit);
+    var sellCwt = n(inp.sellCwt);
+    var truckOut = n(inp.truckOut);
+    var sellComm = n(inp.sellComm) / 100;
+    var shrink = Math.min(100, Math.max(0, n(inp.shrink))) / 100;
+
+    var purchase_total = head * (purchaseWt / 100) * buyCwt;
+    var buy_costs = head * (truckIn + vet + otherBuy) + purchase_total * buyComm;
+    var all_in_purchase = purchase_total + buy_costs;
+
+    var days = Math.max(0, (saleWt - purchaseWt) / adg);
+    var gain_per_hd = saleWt - purchaseWt;
+    var feed_total = head * gain_per_hd * feedPerLb;
+    var yardage_total = head * days * yardage;
+    var interest = all_in_purchase * interestRate * (days / 365);
+    var feeding_other = head * (health + misc);
+
+    var survivors = head * (1 - deathLoss);
+    var pay_wt_hd = saleWt * (1 - shrink);
+    var gross_sale = survivors * (pay_wt_hd / 100) * sellCwt;
+    var sale_costs = survivors * truckOut + gross_sale * sellComm;
+    var net_sale = gross_sale - sale_costs;
+
+    var total_cost = all_in_purchase + feed_total + yardage_total + interest + feeding_other;
+    var pnl = net_sale - total_cost;
+
+    // Cost of gain on survivors: feeding-related costs allocated to survivors
+    // COG = (feed + yardage + interest + health/misc) / survivors, per hd
+    // and $/lb gained on survivors
+    var grow_cost = feed_total + yardage_total + interest + feeding_other;
+    var cog_per_hd = survivors > 0 ? grow_cost / survivors : 0;
+    var cog_per_lb = (survivors > 0 && gain_per_hd > 0) ? cog_per_hd / gain_per_hd : 0;
+
+    // Breakeven sell $/cwt: solve pnl = 0
+    // net_sale = gross*(1-sellComm) - survivors*truckOut
+    // gross = survivors * pay_wt_hd/100 * sellCwt
+    // net_sale = total_cost
+    // survivors * pay_wt/100 * sellCwt * (1-sellComm) - survivors*truckOut = total_cost
+    // sellCwt * (survivors * pay_wt/100 * (1-sellComm)) = total_cost + survivors*truckOut
+    var pay_cwt_factor = survivors * (pay_wt_hd / 100) * (1 - sellComm);
+    var breakeven_cwt = pay_cwt_factor > 0
+      ? (total_cost + survivors * truckOut) / pay_cwt_factor
+      : 0;
+
+    // Max buy $/cwt where pnl = target_profit * head
+    // Let B = buyCwt
+    // purchase_total = head * purchaseWt/100 * B = P_factor * B
+    // buy_costs = head*(truck+vet+other) + purchase_total * buyComm = fixed_buy + P_factor*B*buyComm
+    // all_in = P_factor*B*(1+buyComm) + fixed_buy
+    // interest = all_in * r * (days/365) = all_in * i_factor
+    // total_cost = all_in*(1+i_factor) + feed + yardage + feeding_other
+    // pnl = net_sale - total_cost = target * head
+    // total_cost = net_sale - target*head
+    // all_in*(1+i_factor) = net_sale - target*head - feed - yardage - feeding_other
+    // all_in = RHS / (1+i_factor)
+    // P_factor*B*(1+buyComm) + fixed_buy = all_in
+    // B = (all_in - fixed_buy) / (P_factor*(1+buyComm))
+    var P_factor = head * (purchaseWt / 100);
+    var fixed_buy = head * (truckIn + vet + otherBuy);
+    var i_factor = interestRate * (days / 365);
+    var target_total = targetProfit * head;
+    var rhs = net_sale - target_total - feed_total - yardage_total - feeding_other;
+    var denom_all_in = 1 + i_factor;
+    var max_buy_cwt = 0;
+    if (denom_all_in > 0 && P_factor * (1 + buyComm) > 0) {
+      var needed_all_in = rhs / denom_all_in;
+      max_buy_cwt = (needed_all_in - fixed_buy) / (P_factor * (1 + buyComm));
+    }
+
+    var all_in_per_hd = head > 0 ? all_in_purchase / head : 0;
+    var all_in_cwt = purchaseWt > 0 ? (all_in_per_hd / purchaseWt) * 100 : 0;
+
+    return {
+      purchase_total: purchase_total,
+      buy_costs: buy_costs,
+      all_in_purchase: all_in_purchase,
+      days: days,
+      gain_per_hd: gain_per_hd,
+      feed_total: feed_total,
+      yardage_total: yardage_total,
+      interest: interest,
+      feeding_other: feeding_other,
+      survivors: survivors,
+      pay_wt_hd: pay_wt_hd,
+      gross_sale: gross_sale,
+      sale_costs: sale_costs,
+      net_sale: net_sale,
+      total_cost: total_cost,
+      pnl: pnl,
+      pnl_per_hd: head > 0 ? pnl / head : 0,
+      cog_per_hd: cog_per_hd,
+      cog_per_lb: cog_per_lb,
+      breakeven_cwt: breakeven_cwt,
+      max_buy_cwt: max_buy_cwt,
+      all_in_per_hd: all_in_per_hd,
+      all_in_cwt: all_in_cwt,
+      purchase_per_hd: head > 0 ? purchase_total / head : 0,
+      // for sensitivity recompute
+      _meta: {
+        head: head,
+        purchaseWt: purchaseWt,
+        truckIn: truckIn,
+        buyComm: buyComm,
+        vet: vet,
+        otherBuy: otherBuy,
+        saleWt: saleWt,
+        adg: adg,
+        feedPerLb: feedPerLb,
+        yardage: yardage,
+        deathLoss: deathLoss,
+        interestRate: interestRate,
+        health: health,
+        misc: misc,
+        truckOut: truckOut,
+        sellComm: sellComm,
+        shrink: shrink,
+        buyCwt: buyCwt,
+        sellCwt: sellCwt,
+        days: days,
+        gain_per_hd: gain_per_hd,
+        feed_total: feed_total,
+        yardage_total: yardage_total,
+        feeding_other: feeding_other,
+        survivors: survivors,
+        pay_wt_hd: pay_wt_hd
+      }
+    };
+  }
+
+  function pnlAt(meta, buyCwt, sellCwt) {
+    var head = meta.head;
+    var purchase_total = head * (meta.purchaseWt / 100) * buyCwt;
+    var buy_costs = head * (meta.truckIn + meta.vet + meta.otherBuy) + purchase_total * meta.buyComm;
+    var all_in = purchase_total + buy_costs;
+    var interest = all_in * meta.interestRate * (meta.days / 365);
+    var total_cost = all_in + meta.feed_total + meta.yardage_total + interest + meta.feeding_other;
+    var gross = meta.survivors * (meta.pay_wt_hd / 100) * sellCwt;
+    var sale_costs = meta.survivors * meta.truckOut + gross * meta.sellComm;
+    var net_sale = gross - sale_costs;
+    var pnl = net_sale - total_cost;
+    return head > 0 ? pnl / head : 0;
+  }
+
+  function mountScenario(container, kind) {
+    var tpl = document.getElementById("scenarioTemplate");
+    container.innerHTML = "";
+    container.appendChild(tpl.content.cloneNode(true));
+
+    var inputs = container.querySelectorAll("[data-key]");
+    inputs.forEach(function (el) {
+      var key = el.getAttribute("data-key");
+      if (key === "daysDisplay") return;
+
+      if (el.type === "checkbox") {
+        el.checked = !!state[kind][key];
+      } else if (el.tagName === "SELECT") {
+        el.value = state[kind][key];
+      } else if (typeof state[kind][key] === "object" && state[kind][key] !== null) {
+        // liveCattleFutures map — not bound to a single input
+        return;
+      } else if (state[kind][key] != null) {
+        el.value = state[kind][key];
+      }
+
+      el.addEventListener("input", function () {
+        onInput(kind, key, el);
+      });
+      el.addEventListener("change", function () {
+        onInput(kind, key, el);
+      });
+    });
+
+    var useBtn = container.querySelector('[data-action="useFutures"]');
+    if (useBtn) {
+      useBtn.addEventListener("click", function () {
+        applyFuturesPrice(kind);
+      });
+    }
+    var mktBtn = container.querySelector('[data-action="useMarketAvg"]');
+    if (mktBtn) {
+      mktBtn.addEventListener("click", function () {
+        applyMarketAvg(kind);
+      });
+    }
+  }
+
+  function onInput(kind, key, el) {
+    if (key === "cattleType") {
+      state[kind].cattleType = el.value;
+      state[kind].buyCwt = TYPE_CWT[el.value];
+      var buyEl = el.closest(".panel-body").querySelector('[data-key="buyCwt"]');
+      if (buyEl) buyEl.value = state[kind].buyCwt;
+    } else if (key === "sex") {
+      state[kind].sex = el.value === "heifer" ? "heifer" : "steer";
+    } else if (key === "daysDisplay") {
+      return;
+    } else if (key === "lockToFutures") {
+      state[kind].lockToFutures = !!el.checked;
+      if (state[kind].lockToFutures) {
+        applyFuturesPrice(kind);
+        return;
+      }
+    } else if (el.type === "checkbox") {
+      state[kind][key] = !!el.checked;
+    } else {
+      state[kind][key] = n(el.value);
+      // Manual sale edit turns off lock so we don't overwrite their number
+      if (key === "sellCwt" && state[kind].lockToFutures) {
+        state[kind].lockToFutures = false;
+        var lockEl = el.closest(".panel-body").querySelector('[data-key="lockToFutures"]');
+        if (lockEl) lockEl.checked = false;
+      }
+    }
+    // When locked, keep sale price synced to futures+basis as days/basis/type change
+    if (state[kind].lockToFutures && key !== "sellCwt" && key !== "lockToFutures") {
+      applyFuturesPrice(kind);
+      return;
+    }
+    save();
+    render();
+  }
+
+  function applyFuturesPrice(kind) {
+    var inp = state[kind];
+    var days = Math.max(0, (n(inp.saleWt) - n(inp.purchaseWt)) / Math.max(0.0001, n(inp.adg)));
+    var finish = addDays(new Date(), days);
+    var contracts = lcContractsFromState(inp);
+    var pick = pickLiveCattleContract(finish, contracts);
+    var suggested = Math.round(suggestedSalePrice(inp, pick) * 100) / 100;
+    state[kind].sellCwt = suggested;
+    var root = document.querySelector('.panel-body[data-scenario="' + kind + '"]');
+    if (root) {
+      var sellEl = root.querySelector('[data-key="sellCwt"]');
+      if (sellEl) sellEl.value = suggested;
+    }
+    save();
+    render();
+  }
+
+  function setOut(root, key, text) {
+    var el = root.querySelector('[data-out="' + key + '"]');
+    if (el) el.textContent = text;
+  }
+
+  function renderScenario(kind) {
+    var root = document.querySelector('.panel-body[data-scenario="' + kind + '"]');
+    if (!root) return;
+    var inp = state[kind];
+    var r = compute(inp);
+
+    // sync days display + badge
+    var daysEl = root.querySelector('[data-key="daysDisplay"]');
+    if (daysEl) daysEl.value = fmtNum(r.days, 1);
+
+    var badge = document.getElementById(kind === "A" ? "badgeA" : "badgeB");
+    if (badge) badge.textContent = TYPE_LABELS[inp.cattleType] || inp.cattleType;
+    var mHint = root.querySelector('[data-out="marketHint"]');
+    if (mHint) mHint.innerHTML = marketHintText(inp);
+
+    // --- Live Cattle futures board (finish / sell) ---
+    var contracts = lcContractsFromState(inp);
+    var finish = addDays(new Date(), r.days);
+    var pick = pickLiveCattleContract(finish, contracts);
+    var suggested = Math.round(suggestedSalePrice(inp, pick) * 100) / 100;
+    var hol = isHolsteinType(inp.cattleType);
+
+    var holWrap = root.querySelector("[data-holstein-discount]");
+    if (holWrap) holWrap.classList.toggle("hidden", !hol);
+
+    setOut(root, "futuresAsOfLabel", futuresAsOfLabel());
+    setOut(root, "gfContext", DEFAULT_GF_CONTEXT);
+    setOut(root, "lcSourceNote", futuresSourceNote());
+
+    var grid = root.querySelector('[data-out="futuresGrid"]');
+    if (grid) {
+      var ghtml = "";
+      contracts.forEach(function (c) {
+        var sel = c.code === pick.contract.code ? " selected" : "";
+        ghtml += '<div class="futures-cell' + sel + '"><div class="m">' + c.label +
+          '</div><div class="p">' + fmtMoney(c.price, 2) + '</div></div>';
+      });
+      grid.innerHTML = ghtml;
+    }
+
+    var pickNote = "Finish around " + fmtDateShort(finish) +
+      " → using " + pick.contract.label + " live cattle @ " + fmtMoney(pick.contract.price, 2);
+    if (pick.pastEnd) {
+      pickNote += ' <span class="muted">(finish is past last listed contract — using ' +
+        pick.contract.label + ")</span>";
+    } else if (pick.fallback) {
+      pickNote += ' <span class="muted">(ideal hedge month would be ' + pick.idealLabel +
+        " — using closest listed quote)</span>";
+    }
+    var pickEl = root.querySelector('[data-out="futuresPick"]');
+    if (pickEl) pickEl.innerHTML = pickNote;
+
+    setOut(root, "suggestedSale", fmtMoney(suggested, 2) + "/cwt");
+    var basisStr = (n(inp.basis) >= 0 ? "+" : "") + n(inp.basis).toFixed(2);
+    var sugParts = [fmtMoney(pick.contract.price, 2) + " futures", basisStr + " basis"];
+    if (hol) {
+      var hd = n(inp.holsteinFinishDiscount);
+      sugParts.push((hd >= 0 ? "+" : "") + hd.toFixed(2) + " Holstein disc.");
+    }
+    setOut(root, "suggestedSaleNote", sugParts.join(" · ") + " — you can override");
+
+    // Keep checkbox in sync
+    var lockEl = root.querySelector('[data-key="lockToFutures"]');
+    if (lockEl) lockEl.checked = !!inp.lockToFutures;
+
+    setOut(root, "purchaseTotal", fmtMoney(r.purchase_total));
+    setOut(root, "purchasePerHd", fmtMoney(r.purchase_per_hd, 2) + "/hd");
+    setOut(root, "allInPerHd", fmtMoney(r.all_in_per_hd, 2) + "/hd");
+    setOut(root, "allInCwt", fmtMoney(r.all_in_cwt, 2) + "/cwt all-in");
+
+    setOut(root, "days", fmtNum(r.days, 1) + " days");
+    setOut(root, "feedTotal", fmtMoney(r.feed_total));
+    setOut(root, "feedPerHd", fmtMoney(r.feed_total / Math.max(1, n(inp.head)), 2) + "/hd");
+    setOut(root, "yardageTotal", fmtMoney(r.yardage_total));
+    setOut(root, "yardagePerHd", fmtMoney(r.yardage_total / Math.max(1, n(inp.head)), 2) + "/hd");
+    setOut(root, "interest", fmtMoney(r.interest));
+    setOut(root, "interestPerHd", fmtMoney(r.interest / Math.max(1, n(inp.head)), 2) + "/hd");
+    setOut(root, "feedingOther", fmtMoney(r.feeding_other));
+    setOut(root, "feedingOtherPerHd", fmtMoney(r.feeding_other / Math.max(1, n(inp.head)), 2) + "/hd");
+    setOut(root, "survivors", fmtNum(r.survivors, 1) + " hd");
+    setOut(root, "deathNote", "costs on " + fmtNum(inp.head, 0) + " bought");
+
+    setOut(root, "cogPerHd", fmtMoney(r.cog_per_hd, 2) + "/hd");
+    setOut(root, "cogPerLb", fmtMoney(r.cog_per_lb, 3) + "/lb gained (survivors)");
+    setOut(root, "payWt", fmtNum(r.pay_wt_hd, 1) + " lb");
+    setOut(root, "netSale", "Net sale " + fmtMoney(r.net_sale) + " (" + fmtMoney(r.net_sale / Math.max(1, n(inp.head)), 2) + "/hd bought)");
+
+    setOut(root, "breakeven", fmtMoney(r.breakeven_cwt, 2) + "/cwt");
+    setOut(root, "maxBuy", fmtMoney(r.max_buy_cwt, 2) + "/cwt");
+    setOut(root, "maxBuyNote", "to hit " + fmtMoney(inp.targetProfit, 0) + "/hd target");
+
+    setOut(root, "pnlTotal", fmtMoney(r.pnl));
+    setOut(root, "pnlPerHd", fmtMoney(r.pnl_per_hd, 2) + "/hd bought");
+
+    var pnlStat = root.querySelector('[data-out-class="pnlStat"]');
+    if (pnlStat) {
+      pnlStat.classList.remove("pnl-pos", "pnl-neg");
+      pnlStat.classList.add(r.pnl >= 0 ? "pnl-pos" : "pnl-neg");
+    }
+
+    var formula =
+      "purchase_total = head × (purchase_wt/100) × buy_$/cwt\n" +
+      "buy_costs = head × (truck_in + vet + other) + purchase_total × commission%\n" +
+      "all_in = purchase_total + buy_costs\n" +
+      "days = (sale_wt − purchase_wt) / ADG\n" +
+      "feed = head × (sale_wt − purchase_wt) × feed_$/lb_gain\n" +
+      "yardage = head × days × yardage_$/day\n" +
+      "interest = all_in × (rate%/100) × (days/365)\n" +
+      "survivors = head × (1 − death%/100)\n" +
+      "pay_wt = sale_wt × (1 − shrink%/100)\n" +
+      "gross_sale = survivors × (pay_wt/100) × sell_$/cwt\n" +
+      "net_sale = gross_sale − survivors×truck_out − gross_sale×sale_comm%\n" +
+      "total_cost = all_in + feed + yardage + interest + health/misc\n" +
+      "P&L = net_sale − total_cost\n" +
+      "Costs on all head bought; revenue on survivors only.\n" +
+      "COG $/hd = (feed+yardage+interest+health/misc) ÷ survivors";
+    setOut(root, "formulaText", formula);
+
+    // Sensitivity headers
+    var baseBuy = n(inp.buyCwt);
+    var baseSell = n(inp.sellCwt);
+    var sellDeltas = [-20, -10, 0, 10, 20];
+    var buyDeltas = [20, 10, 0, -10, -20]; // top row = higher buy (worse)
+
+    setOut(root, "sensSellM20", fmtMoney(baseSell - 20, 0));
+    setOut(root, "sensSellM10", fmtMoney(baseSell - 10, 0));
+    setOut(root, "sensSell0", fmtMoney(baseSell, 0));
+    setOut(root, "sensSellP10", fmtMoney(baseSell + 10, 0));
+    setOut(root, "sensSellP20", fmtMoney(baseSell + 20, 0));
+
+    var tbody = root.querySelector('[data-out="sensBody"]');
+    if (tbody) {
+      var html = "";
+      buyDeltas.forEach(function (bd) {
+        var buy = baseBuy + bd;
+        var label = bd === 0 ? "Base " + fmtMoney(buy, 0) : (bd > 0 ? "+" : "") + "$" + bd + " " + fmtMoney(buy, 0);
+        html += "<tr>";
+        html += '<td class="row-label">' + label + "</td>";
+        sellDeltas.forEach(function (sd) {
+          var sell = baseSell + sd;
+          var ph = pnlAt(r._meta, buy, sell);
+          var cls = ph >= 0 ? "pos" : "neg";
+          if (bd === 0 && sd === 0) cls += " base";
+          html += '<td class="' + cls + '">' + fmtMoney(ph, 0) + "</td>";
+        });
+        html += "</tr>";
+      });
+      tbody.innerHTML = html;
+    }
+
+    return r;
+  }
+
+  function updateHero(r) {
+    var hero = document.getElementById("heroPnl");
+    var total = document.getElementById("heroTotal");
+    var per = document.getElementById("heroPerHd");
+    var interp = document.getElementById("heroInterp");
+    if (!r) {
+      total.textContent = "—";
+      per.textContent = "—";
+      if (interp) interp.textContent = "Set your numbers below to see a projection.";
+      hero.classList.remove("pos", "neg");
+      return;
+    }
+    total.textContent = fmtMoney(r.pnl);
+    per.textContent = fmtMoney(r.pnl_per_hd, 2) + " / hd";
+    hero.classList.remove("pos", "neg");
+    hero.classList.add(r.pnl >= 0 ? "pos" : "neg");
+    if (interp) {
+      var abs = Math.abs(r.pnl_per_hd);
+      if (r.pnl_per_hd >= 0) {
+        interp.textContent = "You're projected to make about " + fmtMoney(abs, 0) + " per head.";
+      } else {
+        interp.textContent = "You're projected to lose about " + fmtMoney(abs, 0) + " per head.";
+      }
+    }
+  }
+
+  function setView(view) {
+    state.view = view;
+    save();
+    var panels = document.getElementById("panels");
+    var note = document.getElementById("scenarioNote");
+    document.getElementById("tabA").classList.toggle("active", view === "A");
+    document.getElementById("tabB").classList.toggle("active", view === "B");
+    document.getElementById("tabBoth").classList.toggle("active", view === "both");
+    document.getElementById("tabA").setAttribute("aria-selected", view === "A" ? "true" : "false");
+    document.getElementById("tabB").setAttribute("aria-selected", view === "B" ? "true" : "false");
+    document.getElementById("tabBoth").setAttribute("aria-selected", view === "both" ? "true" : "false");
+
+    if (view === "both") {
+      panels.classList.remove("compare-off");
+      panels.classList.add("compare-on");
+      document.getElementById("panelA").style.display = "";
+      document.getElementById("panelB").style.display = "";
+      note.textContent = "Comparing Beef vs Holstein side by side. Each saves separately.";
+    } else if (view === "B") {
+      panels.classList.add("compare-off");
+      panels.classList.remove("compare-on");
+      document.getElementById("panelA").style.display = "none";
+      document.getElementById("panelB").style.display = "block"; // inline beats .compare-off .panel-b {display:none}
+      note.textContent = "Editing Holstein setup (defaults to Better Holstein @ $310/cwt). Saves on this device.";
+    } else {
+      panels.classList.add("compare-off");
+      panels.classList.remove("compare-on");
+      document.getElementById("panelA").style.display = "";
+      document.getElementById("panelB").style.display = "none";
+      note.textContent = "Editing Beef setup. Numbers save automatically on this phone/computer.";
+    }
+    render();
+  }
+
+
+  function activeKind() {
+    return state.view === "B" ? "B" : "A";
+  }
+
+
+  function marketBandForWeight(wt) {
+    var w = n(wt);
+    var bands = MARKET_AVERAGES.bands;
+    if (!bands.length) return null;
+    if (w < bands[0].lo) return bands[0];
+    for (var i = 0; i < bands.length; i++) {
+      var b = bands[i];
+      var last = i === bands.length - 1;
+      if (last) {
+        if (w >= b.lo && w <= b.hi) return b;
+      } else if (w >= b.lo && w < b.hi) {
+        return b;
+      }
+    }
+    return bands[bands.length - 1];
+  }
+
+  function marketSexKey(inp) {
+    return (inp && inp.sex === "heifer") ? "heifer" : "steer";
+  }
+
+  function marketBreedKey(inp) {
+    if (inp && isHolsteinType(inp.cattleType)) return "holstein";
+    return "beef"; // beef + beefOnDairy use beef-breed cash averages
+  }
+
+  function marketAvgFor(inp, weight, sexKey, breedKey) {
+    var band = marketBandForWeight(weight != null ? weight : (inp && inp.purchaseWt));
+    if (!band) return null;
+    var breed = breedKey || marketBreedKey(inp || {});
+    var sex = sexKey || marketSexKey(inp || {});
+    var bucket = MARKET_AVERAGES[breed];
+    if (!bucket) return null;
+    if (sex === "heifer" && (bucket.heifer == null)) {
+      // Holstein feeder heifers not reported — no average
+      return { band: band.band, sex: sex, breed: breed, price: null, lo: band.lo, hi: band.hi, na: true };
+    }
+    var series = bucket[sex];
+    if (!series) return null;
+    var price = series[band.band];
+    if (price == null) return null;
+    return { band: band.band, sex: sex, breed: breed, price: price, lo: band.lo, hi: band.hi, na: false };
+  }
+
+  function applyMarketAvg(kind) {
+    var inp = state[kind];
+    var hit = marketAvgFor(inp);
+    if (!hit || hit.na || hit.price == null) return;
+    var rounded = Math.round(hit.price * 100) / 100;
+    state[kind].buyCwt = rounded;
+    var root = document.querySelector('.panel-body[data-scenario="' + kind + '"]');
+    if (root) {
+      var buyEl = root.querySelector('[data-key="buyCwt"]');
+      if (buyEl) buyEl.value = rounded;
+    }
+    save();
+    render();
+  }
+
+  function renderMarketAvgTable() {
+    var tbody = document.querySelector("#marketAvgTable tbody");
+    if (!tbody) return;
+    var hiBands = { "600-700": 1, "700-800": 1, "800-900": 1 };
+    var html = "";
+    MARKET_AVERAGES.bands.forEach(function (b) {
+      var bs = MARKET_AVERAGES.beef.steer[b.band];
+      var hs = MARKET_AVERAGES.holstein.steer[b.band];
+      var bh = MARKET_AVERAGES.beef.heifer[b.band];
+      var cls = hiBands[b.band] ? ' class="hi"' : "";
+      html += "<tr" + cls + ">" +
+        '<td class="band">' + b.band + "</td>" +
+        "<td>" + fmtMoney(bs, 2) + "</td>" +
+        "<td>" + fmtMoney(hs, 2) + "</td>" +
+        "<td>" + fmtMoney(bh, 2) + "</td>" +
+        "</tr>";
+    });
+    tbody.innerHTML = html;
+    var foot = document.getElementById("marketAvgFoot");
+    if (foot) {
+      foot.textContent =
+        MARKET_AVERAGES.footnote +
+        " As of " + MARKET_AVERAGES.marketAveragesAsOf +
+        " · " + MARKET_AVERAGES.grade +
+        ". Holstein feeder heifers: N/A.";
+    }
+  }
+
+  function marketHintText(inp) {
+    var hit = marketAvgFor(inp);
+    if (!hit) return "No market avg for this weight";
+    var approx = Math.round((hit.lo + hit.hi) / 2 / 50) * 50;
+    var showWt = Math.round(n(inp.purchaseWt) / 50) * 50;
+    if (!showWt) showWt = approx;
+    var breedLabel = hit.breed === "holstein" ? "Holstein" : "Beef";
+    if (hit.na || hit.price == null) {
+      return "No " + breedLabel.toLowerCase() + " heifer feeder avg — Holstein heifers N/A";
+    }
+    var sexLabel = hit.sex === "heifer" ? "heifers" : "steers";
+    return "Market avg for ~" + showWt + " lb " + breedLabel + " " + sexLabel + ": $" + Math.round(hit.price) +
+      ' <span class="muted">(' + hit.band + ")</span>";
+  }
+
+
+  function maxBuyAtWeight(inp, purchaseWt, targetProfit) {
+    var head = 1; // $/hd economics; scales out
+    var truckIn = n(inp.truckIn);
+    var buyComm = n(inp.buyComm) / 100;
+    var vet = n(inp.vet);
+    var otherBuy = n(inp.otherBuy);
+    var saleWt = n(inp.saleWt);
+    var adg = Math.max(0.0001, n(inp.adg));
+    var feedPerLb = n(inp.feedPerLb);
+    var yardage = n(inp.yardage);
+    var deathLoss = Math.min(100, Math.max(0, n(inp.deathLoss))) / 100;
+    var interestRate = n(inp.interestRate) / 100;
+    var health = n(inp.health);
+    var misc = n(inp.misc);
+    var sellCwt = n(inp.sellCwt);
+    var truckOut = n(inp.truckOut);
+    var sellComm = n(inp.sellComm) / 100;
+    var shrink = Math.min(100, Math.max(0, n(inp.shrink))) / 100;
+
+    var days = Math.max(0, (saleWt - purchaseWt) / adg);
+    var P_factor = head * (purchaseWt / 100);
+    var fixed_buy = head * (truckIn + vet + otherBuy);
+    var i_factor = interestRate * (days / 365);
+    var survivors = head * (1 - deathLoss);
+    var pay_wt_hd = saleWt * (1 - shrink);
+    var gross_sale = survivors * (pay_wt_hd / 100) * sellCwt;
+    var sale_costs = survivors * truckOut + gross_sale * sellComm;
+    var net_sale = gross_sale - sale_costs;
+    var feed_total = head * (saleWt - purchaseWt) * feedPerLb;
+    var yardage_total = head * days * yardage;
+    var feeding_other = head * (health + misc);
+    var target_total = n(targetProfit) * head;
+    var rhs = net_sale - target_total - feed_total - yardage_total - feeding_other;
+    var denom_all_in = 1 + i_factor;
+    if (denom_all_in > 0 && P_factor * (1 + buyComm) > 0) {
+      var needed_all_in = rhs / denom_all_in;
+      return (needed_all_in - fixed_buy) / (P_factor * (1 + buyComm));
+    }
+    return 0;
+  }
+
+  function pnlPerHdAt(inp, purchaseWt, buyCwt) {
+    var clone = {};
+    for (var k in inp) if (Object.prototype.hasOwnProperty.call(inp, k)) clone[k] = inp[k];
+    clone.head = 100; // any head; per-hd independent
+    clone.purchaseWt = purchaseWt;
+    clone.buyCwt = buyCwt;
+    return compute(clone).pnl_per_hd;
+  }
+
+  function auctionWeightStep() {
+    try {
+      return window.matchMedia("(min-width: 720px)").matches ? 25 : 50;
+    } catch (e) {
+      return 50;
+    }
+  }
+
+  /** Copy of inp priced for a given buy weight: when locked to futures the LE contract is re-picked for that weight's finish month (same rule as ring-side). */
+  function inpAtWeight(inp, purchaseWt) {
+    if (!inp.lockToFutures) return inp;
+    var c = {};
+    for (var k in inp) if (Object.prototype.hasOwnProperty.call(inp, k)) c[k] = inp[k];
+    c.purchaseWt = purchaseWt;
+    var days = Math.max(0, (n(c.saleWt) - n(purchaseWt)) / Math.max(0.0001, n(c.adg)));
+    var pick = pickLiveCattleContract(addDays(new Date(), days), lcContractsFromState(c));
+    c.sellCwt = Math.round(suggestedSalePrice(c, pick) * 100) / 100;
+    return c;
+  }
+
+  /** Undiscounted finish sale $/cwt for Beef-vs-Holstein compare (futures+basis if locked, else manual sale). */
+  function undiscountedFinishSale(inp, atWt) {
+    if (inp.lockToFutures) {
+      var days = Math.max(0, (n(inp.saleWt) - n(atWt != null ? atWt : inp.purchaseWt)) / Math.max(0.0001, n(inp.adg)));
+      var finish = addDays(new Date(), days);
+      var pick = pickLiveCattleContract(finish, lcContractsFromState(inp));
+      return n(pick.contract.price) + n(inp.basis);
+    }
+    return n(inp.sellCwt);
+  }
+
+  function holsteinFinishSale(inp, atWt) {
+    // Same signed discount as suggestedSalePrice (default -15 → subtract $15)
+    return undiscountedFinishSale(inp, atWt) + n(inp.holsteinFinishDiscount);
+  }
+
+  function cloneForSale(inp, sellCwt) {
+    var clone = {};
+    for (var k in inp) if (Object.prototype.hasOwnProperty.call(inp, k)) clone[k] = inp[k];
+    clone.sellCwt = sellCwt;
+    return clone;
+  }
+
+  function maxPaySeries(inp, target, step) {
+    var beefSale = undiscountedFinishSale(inp);
+    var holSale = holsteinFinishSale(inp);
+    var beefInp = cloneForSale(inp, beefSale);
+    var holInp = cloneForSale(inp, holSale);
+    var weights = [];
+    var beef = [];
+    var hol = [];
+    var mktBeef = [];
+    var mktHol = [];
+    for (var w = 500; w <= 900; w += step) {
+      weights.push(w);
+      if (inp.lockToFutures) {
+        beefInp = cloneForSale(inp, undiscountedFinishSale(inp, w));
+        holInp = cloneForSale(inp, holsteinFinishSale(inp, w));
+      }
+      beef.push(maxBuyAtWeight(beefInp, w, target));
+      hol.push(maxBuyAtWeight(holInp, w, target));
+      var mb = marketAvgFor({ cattleType: "beef", sex: "steer" }, w, "steer", "beef");
+      var mh = marketAvgFor({ cattleType: "betterHolstein", sex: "steer" }, w, "steer", "holstein");
+      mktBeef.push(mb && mb.price != null ? mb.price : null);
+      mktHol.push(mh && mh.price != null ? mh.price : null);
+    }
+    return {
+      weights: weights,
+      beef: beef,
+      hol: hol,
+      mktBeef: mktBeef,
+      mktHol: mktHol,
+      beefSale: beefSale,
+      holSale: holSale,
+      discount: n(inp.holsteinFinishDiscount)
+    };
+  }
+
+  function renderMaxPayChart(series) {
+    var host = document.getElementById("maxPayChart");
+    if (!host) return;
+
+    var W = 640, H = 260;
+    var pad = { t: 18, r: 16, b: 36, l: 48 };
+    var iw = W - pad.l - pad.r;
+    var ih = H - pad.t - pad.b;
+    var xs = series.weights;
+    var all = series.beef.concat(series.hol);
+    if (series.mktBeef) all = all.concat(series.mktBeef.filter(function (v) { return v != null; }));
+    if (series.mktHol) all = all.concat(series.mktHol.filter(function (v) { return v != null; }));
+    var ymin = Math.min.apply(null, all);
+    var ymax = Math.max.apply(null, all);
+    if (!isFinite(ymin) || !isFinite(ymax)) {
+      host.innerHTML = "<p style=\"padding:12px;color:var(--muted)\">No chart data</p>";
+      return;
+    }
+    var padY = Math.max(2, (ymax - ymin) * 0.08);
+    ymin = ymin - padY;
+    ymax = ymax + padY;
+    if (ymax <= ymin) { ymax = ymin + 10; }
+
+    function xScale(w) {
+      return pad.l + ((w - 500) / 400) * iw;
+    }
+    function yScale(v) {
+      return pad.t + (1 - (v - ymin) / (ymax - ymin)) * ih;
+    }
+    function poly(vals, color, dashed) {
+      var d = "";
+      for (var i = 0; i < xs.length; i++) {
+        if (vals[i] == null || !isFinite(vals[i])) continue;
+        d += (d ? " L" : "M") + xScale(xs[i]).toFixed(1) + " " + yScale(vals[i]).toFixed(1);
+      }
+      if (!d) return "";
+      var dash = dashed ? ' stroke-dasharray="6 4"' : "";
+      var sw = dashed ? "2" : "2.5";
+      return '<path d="' + d + '" fill="none" stroke="' + color + '" stroke-width="' + sw +
+        '" stroke-linejoin="round" stroke-linecap="round"' + dash + "/>";
+    }
+    function dots(vals, color) {
+      var out = "";
+      for (var i = 0; i < xs.length; i++) {
+        if (xs[i] % 100 !== 0 && xs[i] !== 700) continue;
+        out += '<circle cx="' + xScale(xs[i]).toFixed(1) + '" cy="' + yScale(vals[i]).toFixed(1) +
+          '" r="3.5" fill="' + color + '" stroke="#fff" stroke-width="1"/>';
+      }
+      return out;
+    }
+
+    // Y ticks
+    var yTicks = 5;
+    var yLines = "";
+    var yLabels = "";
+    for (var t = 0; t <= yTicks; t++) {
+      var v = ymin + (ymax - ymin) * (t / yTicks);
+      var y = yScale(v);
+      yLines += '<line x1="' + pad.l + '" y1="' + y.toFixed(1) + '" x2="' + (W - pad.r) +
+        '" y2="' + y.toFixed(1) + '" stroke="#e6ebe7" stroke-width="1"/>';
+      yLabels += '<text x="' + (pad.l - 6) + '" y="' + (y + 3).toFixed(1) +
+        '" text-anchor="end" font-size="10" fill="#5a6b5e" font-family="system-ui,sans-serif">' +
+        v.toFixed(0) + '</text>';
+    }
+    // X ticks every 100 lb
+    var xLabels = "";
+    for (var xw = 500; xw <= 900; xw += 100) {
+      var xx = xScale(xw);
+      xLabels += '<line x1="' + xx.toFixed(1) + '" y1="' + (pad.t + ih) + '" x2="' + xx.toFixed(1) +
+        '" y2="' + (pad.t + ih + 4) + '" stroke="#5a6b5e" stroke-width="1"/>';
+      xLabels += '<text x="' + xx.toFixed(1) + '" y="' + (H - 10) +
+        '" text-anchor="middle" font-size="11" fill="#5a6b5e" font-family="system-ui,sans-serif">' +
+        xw + '</text>';
+    }
+
+    var svg =
+      '<svg class="maxpay-chart" viewBox="0 0 ' + W + ' ' + H + '" width="100%" height="100%" ' +
+      'preserveAspectRatio="xMidYMid meet" role="img" aria-label="Max bid by weight Beef vs Holstein">' +
+      '<rect x="0" y="0" width="' + W + '" height="' + H + '" fill="#fff"/>' +
+      yLines +
+      '<line x1="' + pad.l + '" y1="' + (pad.t + ih) + '" x2="' + (W - pad.r) + '" y2="' + (pad.t + ih) +
+      '" stroke="#c5cfc8" stroke-width="1.5"/>' +
+      '<line x1="' + pad.l + '" y1="' + pad.t + '" x2="' + pad.l + '" y2="' + (pad.t + ih) +
+      '" stroke="#c5cfc8" stroke-width="1.5"/>' +
+      yLabels + xLabels +
+      '<text x="' + (pad.l + iw / 2) + '" y="' + (H - 0) +
+      '" text-anchor="middle" font-size="0" fill="transparent">Purchase weight (lb)</text>' +
+      '<text x="12" y="' + (pad.t + ih / 2) +
+      '" text-anchor="middle" font-size="10" fill="#5a6b5e" font-family="system-ui,sans-serif" ' +
+      'transform="rotate(-90 12 ' + (pad.t + ih / 2).toFixed(1) + ')">Max bid $/cwt</text>' +
+      poly(series.mktBeef || [], "#3d5a80", true) +
+      poly(series.mktHol || [], "#9a3412", true) +
+      poly(series.beef, "#2d6a4f") +
+      poly(series.hol, "#c45c26") +
+      dots(series.beef, "#2d6a4f") +
+      dots(series.hol, "#c45c26") +
+      '</svg>';
+
+    host.innerHTML = svg;
+
+    // Fallback HTML table is always the compare table below; if SVG somehow empty, note it
+    var note = document.getElementById("maxPayChartNote");
+    if (note) {
+      var discAbs = Math.abs(series.discount);
+      note.textContent =
+        "Sale used: Beef " + fmtMoney(series.beefSale, 2) + "/cwt · Holstein " +
+        fmtMoney(series.holSale, 2) + "/cwt (finish discount " +
+        (series.discount >= 0 ? "+" : "") + series.discount.toFixed(1) +
+        " → −$" + discAbs.toFixed(0) + "/cwt on Holstein). Dashed lines = cash Beef market vs Holstein market avgs (" +
+        MARKET_AVERAGES.weekLabel + "). Updates with feed, target, futures lock, basis, discount, sale wt.";
+    }
+  }
+
+  function renderMaxPayCompareTable(series) {
+    var tbody = document.querySelector("#maxPayCompareTable tbody");
+    if (!tbody) return;
+    var hi = { 600: 1, 700: 1, 800: 1 };
+    var html = "";
+    for (var i = 0; i < series.weights.length; i++) {
+      var w = series.weights[i];
+      var b = series.beef[i];
+      var h = series.hol[i];
+      var diff = b - h;
+      var cls = hi[w] ? ' class="hi"' : "";
+      html += "<tr" + cls + ">" +
+        '<td class="wt">' + w + "</td>" +
+        '<td class="beef">' + fmtMoney(b, 2) + "</td>" +
+        '<td class="hol">' + fmtMoney(h, 2) + "</td>" +
+        '<td class="diff">' + (diff >= 0 ? "+" : "") + fmtMoney(diff, 2) + "</td>" +
+        "</tr>";
+    }
+    tbody.innerHTML = html;
+  }
+
+  function renderAuctionBidSheet() {
+    renderMarketAvgTable();
+    var kind = activeKind();
+    var inp = state[kind];
+    var label = kind === "B" ? "Holstein" : "Beef";
+    var badge = document.getElementById("auctionSourceBadge");
+    if (badge) badge.textContent = label;
+
+    var target = n(inp.targetProfit);
+    var meta = document.getElementById("auctionMeta");
+    if (meta) {
+      meta.innerHTML =
+        "Using <strong>" + label + "</strong> numbers · " +
+        "finish " + fmtNum(inp.saleWt, 0) + " lb @ " +
+        (inp.lockToFutures ? "LC futures " + fmtNum(inp.basis, 2) + " basis (each weight priced off its own finish month, " + futuresAsOfLabel().replace("As of", "as of") + ")"
+          : fmtMoney(inp.sellCwt, 0) + "/cwt") + " · " +
+        "gain " + fmtNum(inp.adg, 1) + " lb/day · feed " + fmtMoney(inp.feedPerLb, 2) + "/lb · " +
+        "profit goal " + fmtMoney(target, 0) + "/hd";
+    }
+
+    // On wide screens, keep the full grid open by default
+    var details = document.getElementById("auctionGridDetails");
+    if (details) {
+      try {
+        if (window.matchMedia("(min-width: 900px)").matches) details.open = true;
+      } catch (e) { /* ignore */ }
+    }
+
+    var step = auctionWeightStep();
+    var weights = [];
+    for (var w = 500; w <= 900; w += step) weights.push(w);
+    var buys = [];
+    for (var b = 180; b <= 420; b += 10) buys.push(b);
+    var anchors = { 215: 1, 310: 1, 340: 1, 355: 1 };
+
+    var table = document.getElementById("auctionGrid");
+    if (table) {
+      var thead = table.querySelector("thead");
+      var tbody = table.querySelector("tbody");
+      var hr = "<tr><th class=\"corner\">Wt\\\\$/cwt</th>";
+      buys.forEach(function (cwt) {
+        hr += "<th" + (anchors[cwt] ? " class=\"anchor\"" : "") + ">" + cwt + "</th>";
+      });
+      hr += "</tr>";
+      thead.innerHTML = hr;
+
+      var body = "";
+      weights.forEach(function (wt) {
+        body += "<tr><td class=\"row-label\">" + wt + "</td>";
+        buys.forEach(function (cwt) {
+          var ph = pnlPerHdAt(inpAtWeight(inp, wt), wt, cwt);
+          var cls = ph >= target ? "hit" : (ph >= 0 ? "ok" : "loss");
+          body += "<td class=\"" + cls + "\">" + fmtMoney(ph, 0) + "</td>";
+        });
+        body += "</tr>";
+      });
+      tbody.innerHTML = body;
+    }
+
+    var maxBody = document.querySelector("#auctionMaxPay tbody");
+    if (maxBody) {
+      var mh = "";
+      var hi = { 600: 1, 700: 1, 800: 1 };
+      for (var mw = 500; mw <= 900; mw += 25) {
+        var inpW = inpAtWeight(inp, mw);
+        var maxT = maxBuyAtWeight(inpW, mw, target);
+        var max0 = maxBuyAtWeight(inpW, mw, 0);
+        var perHd = maxT * (mw / 100);
+        var cls = hi[mw] ? ' class="hi"' : "";
+        mh += "<tr" + cls + "><td class=\"wt\">" + mw + "</td>" +
+          "<td class=\"bid\">" + fmtMoney(maxT, 2) + "</td>" +
+          "<td>" + fmtMoney(perHd, 0) + "</td>" +
+          "<td>" + fmtMoney(max0, 2) + "</td></tr>";
+      }
+      maxBody.innerHTML = mh;
+    }
+
+    // Beef vs Holstein comparison chart + table (same grow costs; sale differs by finish discount)
+    var cmpStep = auctionWeightStep();
+    var series = maxPaySeries(inp, target, cmpStep);
+    renderMaxPayChart(series);
+    renderMaxPayCompareTable(series);
+  }
+
+  function render() {
+    var rA = renderScenario("A");
+    var rB = renderScenario("B");
+    if (state.view === "B") updateHero(rB);
+    else if (state.view === "both") {
+      updateHero(rA);
+      var per = document.getElementById("heroPerHd");
+      per.textContent = "Beef: " + fmtMoney(rA.pnl_per_hd, 2) + "/hd · Holstein: " + fmtMoney(rB.pnl_per_hd, 2) + "/hd";
+      var interp = document.getElementById("heroInterp");
+      if (interp) {
+        interp.textContent = "Comparing both setups — Beef numbers shown in the big total.";
+      }
+    } else {
+      updateHero(rA);
+    }
+    renderAuctionBidSheet();
+    renderRing();
+  }
+
+  function syncInputsFromState(kind) {
+    var root = document.querySelector('.panel-body[data-scenario="' + kind + '"]');
+    if (!root) return;
+    root.querySelectorAll("[data-key]").forEach(function (el) {
+      var key = el.getAttribute("data-key");
+      if (key === "daysDisplay") return;
+      if (typeof state[kind][key] === "object" && state[kind][key] !== null) return;
+      if (el.type === "checkbox") {
+        el.checked = !!state[kind][key];
+      } else if (state[kind][key] != null) {
+        el.value = state[kind][key];
+      }
+    });
+  }
+
+  /** When a tab is locked, set its sale $/cwt to futures (its finish month) + basis (+ Holstein disc). */
+  function syncLockedSales() {
+    ["A", "B"].forEach(function (k) {
+      if (state[k].lockToFutures) {
+        var days = Math.max(0, (n(state[k].saleWt) - n(state[k].purchaseWt)) / Math.max(0.0001, n(state[k].adg)));
+        var finish = addDays(new Date(), days);
+        var pick = pickLiveCattleContract(finish, lcContractsFromState(state[k]));
+        state[k].sellCwt = Math.round(suggestedSalePrice(state[k], pick) * 100) / 100;
+      }
+    });
+  }
+
+  function renderFuturesFooter() {
+    var el = document.getElementById("footFuturesAsOf");
+    if (el) el.textContent = futuresAsOfLabel().replace("As of", "as of") + " (" + LC_STRIP.source + ")";
+  }
+
+  /** Hosted only: pull futures.json sitting next to this page; use it if newer. Silent on any failure (offline, 404, file://). */
+  function refreshFuturesFromServer() {
+    if (!/^https?:$/.test(location.protocol) || typeof fetch !== "function") return;
+    var url = "futures.json?t=" + Date.now();
+    fetch(url, { cache: "no-store" }).then(function (r) {
+      return r.ok ? r.json() : null;
+    }).then(function (d) {
+      var strip = parseFuturesJson(d, "futures.json");
+      if (!strip) return;
+      try { localStorage.setItem(FUTURES_CACHE_KEY, JSON.stringify(d)); } catch (e) { /* ignore */ }
+      var before = LC_STRIP;
+      if (!adoptStrip(strip)) return;
+      if (JSON.stringify(before.contracts) === JSON.stringify(LC_STRIP.contracts) && before.asOf === LC_STRIP.asOf &&
+          before.priceType === LC_STRIP.priceType) { renderFuturesFooter(); return; }
+      syncLockedSales();
+      syncInputsFromState("A");
+      syncInputsFromState("B");
+      save();
+      render();
+      renderFuturesFooter();
+    }).catch(function () { /* offline or missing — keep embedded/cached strip */ });
+  }
+
+  function resetDefaults() {
+    if (!confirm("Reset both scenarios to defaults? This clears saved numbers on this device.")) return;
+    state.A = defaultInputs("A");
+    state.B = defaultInputs("B");
+    syncLockedSales();
+    save();
+    syncInputsFromState("A");
+    syncInputsFromState("B");
+    render();
+  }
+
+
+  // ===== Ring-side live auction mode =====
+  // Manual entry only. Reuses compute(), maxBuyAtWeight(), marketAvgFor(),
+  // pickLiveCattleContract(), suggestedSalePrice() from the main calculator.
+  // Settings come from the Beef tab (Beef / Beef-on-dairy) or Holstein tab (Holstein).
+  var RING_KEY = "feederCattleRingside_v1"; // separate from STORAGE_KEY — never overwrites calculator settings
+  var RING_BREEDS = { beef: "Beef", beefOnDairy: "Beef-on-dairy", holstein: "Holstein" };
+  var ring = {
+    wt: 700,
+    head: 10,
+    breed: "beef",
+    sex: "steer",
+    bid: "",
+    lot: "",
+    targetHead: 100,
+    log: []
+  };
+  var ringEls = {};
+  var ringLast = null;
+
+  function ringLoad() {
+    try {
+      var raw = localStorage.getItem(RING_KEY);
+      if (!raw) {
+        ring.wt = n(state.A.purchaseWt) || 700;
+        return;
+      }
+      var d = JSON.parse(raw);
+      if (!d || typeof d !== "object") return;
+      if (d.wt != null) ring.wt = d.wt;
+      if (d.head != null) ring.head = d.head;
+      if (RING_BREEDS[d.breed]) ring.breed = d.breed;
+      ring.sex = d.sex === "heifer" ? "heifer" : "steer";
+      if (d.bid != null) ring.bid = d.bid;
+      if (d.lot != null) ring.lot = d.lot;
+      if (n(d.targetHead) > 0) ring.targetHead = n(d.targetHead);
+      ring.log = Array.isArray(d.log) ? d.log : [];
+    } catch (e) { /* ignore */ }
+  }
+
+  function ringSave() {
+    try { localStorage.setItem(RING_KEY, JSON.stringify(ring)); } catch (e) { /* ignore */ }
+  }
+
+  function ringParse(v) {
+    if (v == null) return NaN;
+    var s = String(v).replace(/[$,\s]/g, "");
+    if (s === "") return NaN;
+    var x = parseFloat(s);
+    return isFinite(x) ? x : NaN;
+  }
+
+  function ringNumStr(x) {
+    return String(Math.round(x * 100) / 100);
+  }
+
+  function round2(x) { return Math.round(x * 100) / 100; }
+
+  function ringSourceKind(breed) { return breed === "holstein" ? "B" : "A"; }
+
+  function ringCattleType(breed) {
+    if (breed === "holstein") {
+      return isHolsteinType(state.B.cattleType) ? state.B.cattleType : "betterHolstein";
+    }
+    return breed === "beefOnDairy" ? "beefOnDairy" : "beef";
+  }
+
+  /** Finish sale $/cwt for this lot: futures+basis(+Holstein disc) re-picked for this weight's finish date when the tab is locked; else the tab's sale price (Holstein discount added/removed if breed differs from the tab's type). */
+  function ringSalePrice(base, inp) {
+    if (base.lockToFutures) {
+      var days = Math.max(0, (n(inp.saleWt) - n(inp.purchaseWt)) / Math.max(0.0001, n(inp.adg)));
+      var finish = addDays(new Date(), days);
+      var pick = pickLiveCattleContract(finish, lcContractsFromState(inp));
+      return { price: round2(suggestedSalePrice(inp, pick)), locked: true, pick: pick, finish: finish, adj: 0 };
+    }
+    var adj = 0;
+    var baseHol = isHolsteinType(base.cattleType);
+    var lotHol = isHolsteinType(inp.cattleType);
+    if (lotHol && !baseHol) adj = n(base.holsteinFinishDiscount);
+    else if (!lotHol && baseHol) adj = -n(base.holsteinFinishDiscount);
+    return { price: n(base.sellCwt) + adj, locked: false, adj: adj };
+  }
+
+  function ringCalc() {
+    var kind = ringSourceKind(ring.breed);
+    var base = state[kind];
+    var wt = ringParse(ring.wt);
+    var head = Math.max(0, Math.round(ringParse(ring.head)) || 0);
+    var bid = ringParse(ring.bid);
+    var inp = cloneForSale(base, n(base.sellCwt));
+    inp.cattleType = ringCattleType(ring.breed);
+    inp.sex = ring.sex;
+    inp.purchaseWt = wt > 0 ? wt : n(base.purchaseWt);
+    inp.head = head > 0 ? head : 1;
+    var sale = ringSalePrice(base, inp);
+    inp.sellCwt = sale.price;
+    var target = n(inp.targetProfit);
+    var out = {
+      kind: kind, base: base, inp: inp, sale: sale, wt: wt, head: head, bid: bid,
+      target: target, valid: wt > 0,
+      days: Math.max(0, (n(inp.saleWt) - n(inp.purchaseWt)) / Math.max(0.0001, n(inp.adg)))
+    };
+    if (!out.valid) return out;
+    out.maxCwt = maxBuyAtWeight(inp, wt, target);
+    out.beCwt = maxBuyAtWeight(inp, wt, 0);
+    out.maxHd = out.maxCwt * (wt / 100);
+    out.beHd = out.beCwt * (wt / 100);
+    out.mkt = marketAvgFor(inp, wt, ring.sex, marketBreedKey(inp));
+    if (isFinite(bid) && bid > 0) {
+      var c = {};
+      for (var k in inp) if (Object.prototype.hasOwnProperty.call(inp, k)) c[k] = inp[k];
+      c.buyCwt = bid;
+      var r = compute(c);
+      out.hasBid = true;
+      out.profitHd = r.pnl_per_hd;
+      out.profitTotal = head > 0 ? r.pnl : 0;
+      out.costHd = bid * (wt / 100);
+      out.lotCost = head * out.costHd;
+      var maxR = round2(out.maxCwt), beR = round2(out.beCwt), bidR = round2(bid);
+      out.status = bidR <= maxR ? "green" : (bidR <= beR ? "yellow" : "red");
+    }
+    return out;
+  }
+
+  function ringSetText(id, text) {
+    var el = ringEls[id];
+    if (el) el.textContent = text;
+  }
+
+  function ringAssumeShort(c) {
+    var inp = c.inp;
+    return (c.kind === "B" ? "Holstein tab" : "Beef tab") + ": sell " + fmtMoney(c.sale.price, 2) +
+      (c.sale.locked ? " (" + c.sale.pick.contract.label + " futures as of " + fmtIsoDate(LC_STRIP.asOf, false) + ")"
+        : " (manual; LC as of " + fmtIsoDate(LC_STRIP.asOf, false) + ")") +
+      " · feed " + fmtMoney(n(inp.feedPerLb), 2) + "/lb · " + fmtNum(inp.adg, 1) + " lb/day · goal " + fmtMoney(c.target, 0) + "/hd" +
+      " · " + fmtNum(inp.saleWt, 0) + " lb finish · death " + fmtNum(inp.deathLoss, 1) + "% · shrink " + fmtNum(inp.shrink, 1) + "%";
+  }
+
+  function ringAssumeHtml(c) {
+    var inp = c.inp;
+    var tab = c.kind === "B" ? "Holstein tab" : "Beef tab";
+    var typeLabel = TYPE_LABELS[inp.cattleType] || inp.cattleType;
+    var saleTxt = fmtMoney(c.sale.price, 2) + "/cwt";
+    if (c.sale.locked) {
+      var bs = n(inp.basis);
+      saleTxt += " (" + c.sale.pick.contract.label + " LC " + fmtMoney(c.sale.pick.contract.price, 2) +
+        " " + (bs >= 0 ? "+" : "") + bs.toFixed(2) + " basis" +
+        (isHolsteinType(inp.cattleType) ? " " + n(inp.holsteinFinishDiscount).toFixed(2) + " Hol" : "") + ")";
+    } else if (c.sale.adj) {
+      saleTxt += " (tab price " + (c.sale.adj >= 0 ? "+" : "") + c.sale.adj.toFixed(2) + " Holstein adj.)";
+    }
+    return "Using <strong>" + tab + "</strong> (" + typeLabel + "): sell " + fmtNum(inp.saleWt, 0) + " lb @ " + saleTxt +
+      " · gain " + fmtNum(inp.adg, 1) + " lb/day (" + fmtNum(c.days, 0) + " days)" +
+      " · feed " + fmtMoney(n(inp.feedPerLb), 2) + "/lb gain · yard " + fmtMoney(n(inp.yardage), 2) + "/day" +
+      " · death " + fmtNum(inp.deathLoss, 1) + "% · shrink " + fmtNum(inp.shrink, 1) + "% · interest " + fmtNum(inp.interestRate, 1) + "%" +
+      " · goal <strong>" + fmtMoney(c.target, 0) + "/hd</strong>. Live Cattle futures " + futuresAsOfLabel().replace("As of", "as of") +
+      " (" + escHtml(LC_STRIP.source) + "). Change these on the calculator (Edit).";
+  }
+
+  function ringTotals() {
+    var t = { head: 0, lbs: 0, cost: 0, profit: 0, bought: 0, passed: 0 };
+    ring.log.forEach(function (e) {
+      if (e.action === "bought") {
+        t.bought++;
+        t.head += n(e.head);
+        t.lbs += n(e.head) * n(e.wt);
+        t.cost += n(e.head) * n(e.wt) / 100 * n(e.bid);
+        t.profit += n(e.profitTotal);
+      } else {
+        t.passed++;
+      }
+    });
+    return t;
+  }
+
+  function fmtSigned(x, digits) {
+    return (x > 0 ? "+" : "") + fmtMoney(x, digits);
+  }
+
+  function fmtTime(iso) {
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return "";
+    var h = d.getHours(), m = d.getMinutes();
+    var ap = h >= 12 ? "p" : "a";
+    h = h % 12 || 12;
+    return h + ":" + (m < 10 ? "0" : "") + m + ap;
+  }
+
+  function escHtml(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (ch) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+    });
+  }
+
+  function renderRingLog() {
+    var t = ringTotals();
+    var target = Math.max(1, n(ring.targetHead) || 100);
+    var pct = Math.min(100, (t.head / target) * 100);
+    var progTxt = fmtNum(t.head, 0) + " / " + fmtNum(target, 0) + " hd";
+    ringSetText("ringProgMini", progTxt);
+    ringSetText("ringProgText", progTxt + " (" + Math.round((t.head / target) * 100) + "%)");
+    if (ringEls.ringBar) ringEls.ringBar.style.width = pct + "%";
+    ringSetText("ringTHead", fmtNum(t.head, 0));
+    ringSetText("ringTWt", t.head > 0 ? fmtNum(t.lbs / t.head, 0) + " lb" : "—");
+    ringSetText("ringTPrice", t.lbs > 0 ? fmtMoney(t.cost / (t.lbs / 100), 2) : "—");
+    ringSetText("ringTCost", t.head > 0 ? fmtMoney(t.cost, 0) : "—");
+    ringSetText("ringTProfit", t.head > 0 ? fmtSigned(t.profit, 0) : "—");
+    if (ringEls.ringTProfit) {
+      ringEls.ringTProfit.classList.toggle("pos", t.head > 0 && t.profit >= 0);
+      ringEls.ringTProfit.classList.toggle("neg", t.head > 0 && t.profit < 0);
+    }
+    ringSetText("ringTLots", t.bought + " / " + t.passed);
+
+    var list = ringEls.ringList;
+    if (list) {
+      var html = "";
+      for (var i = ring.log.length - 1; i >= 0; i--) {
+        var e = ring.log[i];
+        var bought = e.action === "bought";
+        var breed = RING_BREEDS[e.breed] || e.breed || "";
+        var sex = e.sex === "heifer" ? "hfr" : "str";
+        var l1 = fmtTime(e.t) + (e.lot ? " · Lot " + escHtml(e.lot) : "") + " · " +
+          (bought ? "BOUGHT" : "PASS") + " " + fmtNum(e.head, 0) + " hd";
+        var price = n(e.bid) > 0 ? fmtMoney(n(e.bid), 2) + "/cwt" : "no bid";
+        var l2 = fmtNum(e.wt, 0) + " lb " + escHtml(breed) + " " + sex + " · " + price;
+        if (n(e.bid) > 0) {
+          var cls = n(e.profitHd) >= 0 ? "pos" : "neg";
+          l2 += ' · <span class="' + cls + '">' + fmtSigned(n(e.profitHd), 0) + "/hd</span>";
+          if (bought) l2 += ' (<span class="' + cls + '">' + fmtSigned(n(e.profitTotal), 0) + "</span>)";
+        }
+        html += '<li class="' + (bought ? "bought" : "pass") + '"><div><div class="l1">' + l1 +
+          '</div><div class="l2">' + l2 + '</div></div>' +
+          '<button type="button" class="del" data-del="' + escHtml(e.id) + '" aria-label="Delete this entry">&times;</button></li>';
+      }
+      list.innerHTML = html;
+    }
+    if (ringEls.ringEmpty) ringEls.ringEmpty.hidden = ring.log.length > 0;
+  }
+
+  function renderRing() {
+    if (!ringEls.ringWt) return;
+    var c = ringCalc();
+    ringLast = c;
+
+    if (ringEls.ringAssume) ringEls.ringAssume.textContent = ringAssumeShort(c);
+    if (ringEls.ringAssumeFull) ringEls.ringAssumeFull.innerHTML = "Assumptions in use — " + ringAssumeHtml(c);
+    if (ringEls.ringEdit) ringEls.ringEdit.setAttribute("data-kind", c.kind);
+    ringSetText("ringMiniMax", c.valid ? fmtMoney(c.maxCwt, 2) : "—");
+    if (ringEls.ringDot) ringEls.ringDot.className = "rt-dot" + (c.valid && c.hasBid ? " st-" + c.status : "");
+
+    // toggles
+    ["ringBreed", "ringSex"].forEach(function (id) {
+      var grp = ringEls[id];
+      if (!grp) return;
+      var cur = id === "ringBreed" ? ring.breed : ring.sex;
+      grp.querySelectorAll("button[data-v]").forEach(function (b) {
+        b.setAttribute("aria-pressed", b.getAttribute("data-v") === cur ? "true" : "false");
+      });
+    });
+    var holBtn = ringEls.ringBreed && ringEls.ringBreed.querySelector('[data-v="holstein"]');
+    if (holBtn) holBtn.innerHTML = escHtml(TYPE_LABELS[ringCattleType("holstein")] || "Holstein").replace(" Holstein", "<br>Holstein");
+
+    ringSetText("ringGoal", "for " + fmtMoney(c.target, 0) + "/hd profit");
+    var card = ringEls.ringBidCard;
+    if (!c.valid) {
+      ringSetText("ringMaxCwt", "—");
+      ringSetText("ringMaxHd", "enter weight");
+      ringSetText("ringBe", "—");
+      ringSetText("ringBeHd", "$0 profit");
+      ringSetText("ringMkt", "—");
+      ringSetText("ringMktNote", "—");
+    } else {
+      ringEls.ringMaxCwt.innerHTML = escHtml(fmtMoney(c.maxCwt, 2)) + "<small>/cwt</small>";
+      ringSetText("ringMaxHd", fmtMoney(c.maxHd, 0) + " / head");
+      ringSetText("ringBe", fmtMoney(c.beCwt, 2));
+      ringSetText("ringBeHd", fmtMoney(c.beHd, 0) + "/hd · $0 profit");
+      if (c.mkt && !c.mkt.na && c.mkt.price != null) {
+        ringSetText("ringMkt", fmtMoney(c.mkt.price, 2));
+        ringSetText("ringMktNote", c.mkt.band + " " + (c.mkt.breed === "holstein" ? "Hol" : "beef") + " " +
+          (c.mkt.sex === "heifer" ? "hfrs" : "strs") + " · " + MARKET_AVERAGES.weekLabel.replace(/,\s*\d{4}$/, ""));
+        if (ringEls.ringMktNote) ringEls.ringMktNote.title = "Cash auction average, week of " + MARKET_AVERAGES.weekLabel + " (" + MARKET_AVERAGES.grade + ")";
+      } else {
+        ringSetText("ringMkt", "N/A");
+        ringSetText("ringMktNote", c.mkt && c.mkt.na ? "Holstein heifers not reported" : "no average for this weight");
+      }
+    }
+
+    if (card) card.className = "ring-card ring-bid st-" + (c.hasBid && c.valid ? c.status : "none");
+    var phd = ringEls.ringPHd, ptot = ringEls.ringPTot;
+    if (c.valid && c.hasBid) {
+      var under = round2(c.maxCwt) - round2(c.bid);
+      var toBe = round2(c.beCwt) - round2(c.bid);
+      if (c.status === "green") {
+        ringSetText("ringStatus", "✔ Buy zone");
+        ringSetText("ringStatusSub", (Math.abs(under) < 0.005 ? "right at" : fmtMoney(under, 2) + " under") + " max bid");
+      } else if (c.status === "yellow") {
+        ringSetText("ringStatus", "Caution — over max");
+        ringSetText("ringStatusSub", fmtMoney(-under, 2) + " over max · " + fmtMoney(toBe, 2) + " under breakeven");
+      } else {
+        ringSetText("ringStatus", "✖ Stop — loses money");
+        ringSetText("ringStatusSub", fmtMoney(-toBe, 2) + " over breakeven");
+      }
+      phd.textContent = fmtSigned(c.profitHd, 0);
+      ptot.textContent = fmtSigned(c.profitTotal, 0);
+      phd.className = "v " + (c.profitHd >= 0 ? "pos" : "neg");
+      ptot.className = "v " + (c.profitTotal >= 0 ? "pos" : "neg");
+      ringSetText("ringCostHd", fmtMoney(c.costHd, 0) + "/hd at this bid");
+      ringSetText("ringLotCost", fmtNum(c.head, 0) + " hd · " + fmtMoney(c.lotCost, 0) + " lot cost");
+    } else {
+      ringSetText("ringStatus", c.valid ? "Enter the bid" : "Enter weight");
+      ringSetText("ringStatusSub", "\u00a0");
+      phd.textContent = "—";
+      ptot.textContent = "—";
+      phd.className = "v";
+      ptot.className = "v";
+      ringSetText("ringCostHd", "at this bid");
+      ringSetText("ringLotCost", fmtNum(c.head, 0) + " hd");
+    }
+    renderRingLog();
+  }
+
+  function ringSyncInputs() {
+    if (!ringEls.ringWt) return;
+    var act = document.activeElement;
+    [["ringWt", "wt"], ["ringHead", "head"], ["ringBid", "bid"], ["ringLot", "lot"], ["ringTarget", "targetHead"]].forEach(function (p) {
+      var el = ringEls[p[0]];
+      if (el && el !== act) el.value = ring[p[1]] == null ? "" : ring[p[1]];
+    });
+  }
+
+  function ringToast(msg) {
+    var el = ringEls.ringToast;
+    if (!el) return;
+    el.textContent = msg;
+    el.hidden = false;
+    clearTimeout(ringToast._t);
+    ringToast._t = setTimeout(function () { el.hidden = true; }, 2200);
+  }
+
+  function ringStep(field, delta, startFrom) {
+    var cur = ringParse(ring[field]);
+    if (!isFinite(cur)) cur = startFrom;
+    if (!isFinite(cur)) return;
+    var next = cur + delta;
+    if (field === "head") next = Math.max(1, Math.round(next));
+    if (field === "wt") next = Math.max(25, next);
+    if (field === "bid") next = Math.max(0, next);
+    ring[field] = ringNumStr(next);
+    ringSyncInputs();
+    var el = ringEls[{ wt: "ringWt", head: "ringHead", bid: "ringBid" }[field]];
+    if (el) el.value = ring[field]; // also update if the box still has focus (phones keep focus on tap)
+    ringSave();
+    renderRing();
+  }
+
+  function ringRecord(action) {
+    var c = ringCalc();
+    if (!c.valid) { ringToast("Enter avg weight first"); return; }
+    if (!(c.head > 0)) { ringToast("Enter head count first"); return; }
+    if (action === "bought" && !c.hasBid) { ringToast("Enter the price you bought at"); return; }
+    var e = {
+      id: String(Date.now()) + "-" + Math.floor(Math.random() * 1e4),
+      t: new Date().toISOString(),
+      action: action,
+      lot: String(ring.lot || "").trim(),
+      head: c.head,
+      wt: round2(c.wt),
+      breed: ring.breed,
+      cattleType: c.inp.cattleType,
+      sex: ring.sex,
+      bid: c.hasBid ? round2(c.bid) : 0,
+      maxCwt: round2(c.maxCwt),
+      beCwt: round2(c.beCwt),
+      sellCwt: round2(c.sale.price),
+      targetProfit: c.target,
+      profitHd: c.hasBid ? round2(c.profitHd) : 0,
+      profitTotal: c.hasBid ? round2(c.profitTotal) : 0
+    };
+    ring.log.push(e);
+    // Next lot: bump numeric lot #, clear the bid
+    if (/^\d+$/.test(e.lot)) ring.lot = String(parseInt(e.lot, 10) + 1);
+    ring.bid = "";
+    ringSave();
+    ringSyncInputs();
+    if (ringEls.ringBid) ringEls.ringBid.value = "";
+    if (ringEls.ringLot) ringEls.ringLot.value = ring.lot;
+    renderRing();
+    if (action === "bought") {
+      ringToast("Bought " + e.head + " hd @ " + fmtMoney(e.bid, 2) + " · " + fmtSigned(e.profitTotal, 0) + " proj.");
+    } else {
+      ringToast("Passed" + (e.lot ? " lot " + e.lot : "") + (e.bid ? " at " + fmtMoney(e.bid, 2) : ""));
+    }
+  }
+
+  function csvCell(v) {
+    var s = v == null ? "" : String(v);
+    return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  }
+
+  function ringCsv() {
+    if (!ring.log.length) { ringToast("Log is empty"); return; }
+    var cols = ["date", "time", "action", "lot", "head", "avg_wt_lb", "breed", "cattle_type", "sex",
+      "price_per_cwt", "price_per_head", "lot_cost", "max_bid_per_cwt", "breakeven_per_cwt",
+      "finish_sale_per_cwt_used", "profit_goal_per_head", "proj_profit_per_head", "proj_profit_lot"];
+    var lines = [cols.join(",")];
+    ring.log.forEach(function (e) {
+      var d = new Date(e.t);
+      var date = isNaN(d.getTime()) ? "" :
+        d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
+      var time = isNaN(d.getTime()) ? "" :
+        ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2) + ":" + ("0" + d.getSeconds()).slice(-2);
+      var bought = e.action === "bought";
+      var perHd = n(e.bid) * n(e.wt) / 100;
+      lines.push([date, time, bought ? "BOUGHT" : "PASS", e.lot, e.head, e.wt,
+        RING_BREEDS[e.breed] || e.breed, TYPE_LABELS[e.cattleType] || e.cattleType, e.sex,
+        n(e.bid) ? n(e.bid).toFixed(2) : "", n(e.bid) ? perHd.toFixed(2) : "",
+        n(e.bid) ? (perHd * n(e.head)).toFixed(2) : "",
+        n(e.maxCwt).toFixed(2), n(e.beCwt).toFixed(2), n(e.sellCwt).toFixed(2), n(e.targetProfit).toFixed(0),
+        n(e.bid) ? n(e.profitHd).toFixed(2) : "", n(e.bid) && bought ? n(e.profitTotal).toFixed(2) : ""
+      ].map(csvCell).join(","));
+    });
+    var t = ringTotals();
+    lines.push("");
+    lines.push(["TOTAL BOUGHT", "", "", "", t.head, t.head ? (t.lbs / t.head).toFixed(0) : "", "", "", "",
+      t.lbs ? (t.cost / (t.lbs / 100)).toFixed(2) : "", "", t.cost.toFixed(2), "", "", "", "", "",
+      t.profit.toFixed(2)].map(csvCell).join(","));
+    var csv = "\ufeff" + lines.join("\r\n") + "\r\n";
+    var now = new Date();
+    var fname = "ringside-log-" + now.getFullYear() + "-" + ("0" + (now.getMonth() + 1)).slice(-2) + "-" +
+      ("0" + now.getDate()).slice(-2) + ".csv";
+    try {
+      var blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+      if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveOrOpenBlob(blob, fname);
+        return;
+      }
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = fname;
+      a.style.display = "none";
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(url); a.remove(); }, 1500);
+      ringToast("Downloaded " + fname);
+    } catch (err) {
+      window.open("data:text/csv;charset=utf-8," + encodeURIComponent(csv));
+    }
+  }
+
+  function isRingHash() { return /^#ring/i.test(location.hash || ""); }
+
+  function applyRoute() {
+    var on = isRingHash();
+    var sec = document.getElementById("ringside");
+    if (!sec) return;
+    document.body.classList.toggle("ring-mode", on);
+    sec.hidden = !on;
+    document.title = on ? "Ring-side · Feeder Cattle P&L" : "Feeder Cattle P&L";
+    if (on) {
+      ringSyncInputs();
+      renderRing();
+      window.scrollTo(0, 0);
+    } else if ((location.hash || "") === "#calc") {
+      var p = document.getElementById("panels");
+      if (p && p.scrollIntoView) setTimeout(function () { p.scrollIntoView(); }, 0);
+    }
+  }
+
+  function ringInit() {
+    ["ringWt", "ringHead", "ringLot", "ringBid", "ringTarget", "ringAssume", "ringProgMini", "ringProgText", "ringBar",
+      "ringBreed", "ringSex", "ringGoal", "ringMaxCwt", "ringMaxHd", "ringBe", "ringBeHd", "ringMkt", "ringMktNote",
+      "ringBidCard", "ringStatus", "ringStatusSub", "ringPHd", "ringPTot", "ringCostHd", "ringLotCost",
+      "ringBought", "ringPass", "ringTHead", "ringTWt", "ringTPrice", "ringTCost", "ringTProfit", "ringTLots",
+      "ringCsv", "ringUndo", "ringClear", "ringList", "ringEmpty", "ringToast", "ringside",
+      "ringAssumeFull", "ringAssumeWrap", "ringEdit", "ringMiniMax", "ringDot"].forEach(function (id) {
+      ringEls[id] = document.getElementById(id);
+    });
+    if (!ringEls.ringside) return;
+    ringLoad();
+    ringSyncInputs();
+
+    function bindText(id, field) {
+      var el = ringEls[id];
+      el.addEventListener("input", function () {
+        ring[field] = el.value;
+        ringSave();
+        renderRing();
+      });
+      el.addEventListener("focus", function () {
+        try { el.select(); } catch (e) { /* ignore */ }
+      });
+    }
+    bindText("ringWt", "wt");
+    bindText("ringHead", "head");
+    bindText("ringLot", "lot");
+    bindText("ringBid", "bid");
+    bindText("ringTarget", "targetHead");
+
+    ringEls.ringBid.addEventListener("keydown", function (ev) {
+      var step = ev.shiftKey ? 5 : 1;
+      if (ev.key === "ArrowUp" || ev.key === "PageUp") {
+        ev.preventDefault();
+        ringStep("bid", ev.key === "PageUp" ? 5 : step, ringLast && ringLast.valid ? Math.round(ringLast.maxCwt) : NaN);
+      } else if (ev.key === "ArrowDown" || ev.key === "PageDown") {
+        ev.preventDefault();
+        ringStep("bid", ev.key === "PageDown" ? -5 : -step, ringLast && ringLast.valid ? Math.round(ringLast.maxCwt) : NaN);
+      }
+    });
+
+    ringEls.ringside.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button, a");
+      if (!b || !ringEls.ringside.contains(b)) return;
+      if (b.hasAttribute("data-ring-wt")) {
+        ringStep("wt", n(b.getAttribute("data-ring-wt")), n(state.A.purchaseWt) || 700);
+      } else if (b.hasAttribute("data-ring-hd")) {
+        ringStep("head", n(b.getAttribute("data-ring-hd")), 1);
+      } else if (b.hasAttribute("data-ring-bid")) {
+        // Empty bid: first tap starts from the rounded max bid
+        var start = ringLast && ringLast.valid ? Math.round(ringLast.maxCwt) : NaN;
+        if (!isFinite(ringParse(ring.bid))) {
+          ring.bid = isFinite(start) ? String(start) : "";
+          ringSyncInputs();
+          ringEls.ringBid.value = ring.bid;
+          ringSave();
+          renderRing();
+        } else {
+          ringStep("bid", n(b.getAttribute("data-ring-bid")), start);
+        }
+      } else if (b.parentNode === ringEls.ringBreed && b.hasAttribute("data-v")) {
+        ring.breed = RING_BREEDS[b.getAttribute("data-v")] ? b.getAttribute("data-v") : "beef";
+        ringSave();
+        renderRing();
+      } else if (b.parentNode === ringEls.ringSex && b.hasAttribute("data-v")) {
+        ring.sex = b.getAttribute("data-v") === "heifer" ? "heifer" : "steer";
+        ringSave();
+        renderRing();
+      } else if (b.id === "ringBought") {
+        ringRecord("bought");
+      } else if (b.id === "ringPass") {
+        ringRecord("pass");
+      } else if (b.id === "ringCsv") {
+        ringCsv();
+      } else if (b.id === "ringUndo") {
+        if (!ring.log.length) { ringToast("Nothing to undo"); return; }
+        var last = ring.log[ring.log.length - 1];
+        if (!confirm("Remove the last entry (" + (last.action === "bought" ? "BOUGHT " : "PASS ") +
+          fmtNum(last.head, 0) + " hd @ " + fmtMoney(n(last.bid), 2) + ")?")) return;
+        ring.log.pop();
+        ringSave();
+        renderRing();
+      } else if (b.id === "ringClear") {
+        if (!ring.log.length) { ringToast("Log is already empty"); return; }
+        if (!confirm("Clear the whole sale log (" + ring.log.length + " entries)? Download the CSV first if you need it. This cannot be undone.")) return;
+        ring.log = [];
+        ringSave();
+        renderRing();
+        ringToast("Log cleared");
+      } else if (b.hasAttribute("data-del")) {
+        var id = b.getAttribute("data-del");
+        for (var i = 0; i < ring.log.length; i++) {
+          if (String(ring.log[i].id) === id) {
+            if (!confirm("Delete this log entry?")) return;
+            ring.log.splice(i, 1);
+            break;
+          }
+        }
+        ringSave();
+        renderRing();
+      } else if (b.id === "ringEdit") {
+        var kind = b.getAttribute("data-kind") === "B" ? "B" : "A";
+        if (state.view !== "both") setView(kind);
+      }
+    });
+
+    ringEls.ringAssume.addEventListener("click", function () {
+      ringEls.ringAssumeWrap.classList.toggle("open");
+    });
+    window.addEventListener("hashchange", applyRoute);
+    // Keep in sync if the calculator is open in another tab/window on the same device
+    window.addEventListener("storage", function (ev) {
+      if (ev.key === STORAGE_KEY) {
+        load();
+        syncInputsFromState("A");
+        syncInputsFromState("B");
+        render();
+      } else if (ev.key === RING_KEY) {
+        ringLoad();
+        ringSyncInputs();
+        renderRing();
+      }
+    });
+    applyRoute();
+  }
+
+  var ICON_512 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIABAMAAAAGVsnJAAAAMFBMVEX////c6+H/1gr+1grgyRGovFKQtm+GpSVqpW9Jj0IqgUAffEAdez4cej0bej0PKhycNEoVAAANtklEQVR42u2dTXAUxxXH3/SugFNqBJYrziEREkLObUF8VCoXkQpCyUkBgYxxlcGEsiFJRTEmJMoXTsVgi49AyiFURCguNhLiQ7m4jEVsVQ5xDAHrkEpFbAnvyaSksNojinZ3ckC7K+18dS+zs9Pd/75oNdMr9fvN/71+b6ZnxrBI78YIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA6Rav9IszETPEMCv8nqWC9U/AoAIAVia6gq6vPoAom18JAlEAMxT1JugIYgCifvgrEAFTz34xlTL17BcjIOACMyRP4w8ETEn7BcTKDUCyVeVW0ACk8X9RwTJF7ecmwAlAPvt5x8wC1ZOEgZALgKS31VhBAbAycgLgEi5TNABwj5wp6wCcQ2fqOgCfEzCFHYBr9ExhB+AaPlNbAP7jZ2oLwN8AprgAfC1gigvA1wSmugD8bGCqC8DPCKa8AHysYMoLwMcMpr4AvO1g6gvA2xCsENHAAzwtYRp4gKcpTAcBeNmCGKCDB3gZw7TwAA9r4AJaeICHOUwPD3C3By6ghwe4GwQFaBICXC1imniAq0lwAV08wM0mKAAANImBbkZBAdrEQBeroABtQoCLWVAAAGgTA53tggIAQJtJwNkwKAAAAECbWdDRMigAAAAAAHTJgxxNgwIAAAAAAAB0yYSdbIMCAAAAAAAAAAAAAAAAdG3xGv7v2a/Pf3ihFwoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIodXsusBoOpUrfH7vb21s5brGmozD4T1D1X+dRH548tPPyjcuX7G2aVvVzTUjACB78h+fuQxvZVtzt+oA8sPDKa/9TW0tW1UGMNd/3XeQq9peUxbAjYEUT7em9ZsTSgK4cTzD2XP55qogsAMIdRrkt5/SQ3WJUMYUZiI0MZChyLUQAcz9LEVaA+iPov0hArhxnbQGkB3QvBr8IKU3gLkLmp8PGE3pDSAbVQGEBeBeSnMA10hvAHNjmgNIZjQHEF0PCAdAflxzAHOp6AII5YTIpCP6bbmCZzz3lXzqTjqjLoC79k1G98b22QKA+HYiyl6d/DCjKIARu/09thO/8R7ad8HtioHcALL2A9vqeOK74XDuypWQEYQRBHM2AA1vu3SN9Vza3qjm+YBFDrDFdJfk4WNblVOAzcher+4tfYca1QJgywNbfL7Q84fvKAXAlgb5arzhJ6G5QS0WSLAu3y6xvuYH6gAorwRiPF/qUXgWiNS6pDAGU54GGJoByGUowi0EANF+PF8t/NGCAjRXQF53ADnNANhmvfyI5gog7QFM6AUgbpZvyY7opQAbAGtAcxegqZNaAUjYc6OhU1EBUKM7RvKDuZDP/tYSgJOl+aHRzV/WBcAax63pIW1iwErdiyHfc4Cf1HABRRg3TMx9zXcUq9aubw/FXLMWAKg7xSHF5m3dtQAQSiKU4JkYk2/tPKFqJriGq5eVHNx5VckYUHp2pv9wVh1OKOgCMZO3p5X86TUFXSAuEOGn3zyhHgD6hkiZMHRcuRjAkQksGtPqdxSLAVTXJdLbundCNRcgsfUO1tBvVQOwWqz4ty6NKAYg/pJY//yAYgCoQ0wCNHVaMQCiErCGMmoBoM4usf5zF1XKA4iIZnelhPrXfaxQHkBEtHSfoAROq+UCRFteFes/qhoAel6MwHRKNQD0nFBCGM4yglABsL5DpkD3m8oBIOoRWQn/UEEAtGWQ3w2yYwoCoHjfG7xXiqxxFQEQbRk8xIngjlKZ4MKWu3L1fk2SwUg8T3A+zbl913eeZ7cUBkCUvey3TMQYSChUC9jDoe8DNK0QcsFoP1VWFwAtTS47xjUBsPHysa2OOXI6BEeMhtY3b25zetjmQ41iwJZLDlVCXiMAVPeOWYt/G6FZYOlLmgOg7TYJ5PQCUNeuuQJoq+4AmnUHYFtLZGkGIG5qrgCuFZVaVYPaAzB0A9AIBSgJYBd3z5SaACZ2VfrNmCIuMLEro/ksMLF/jKeb7VoYUwUAJd8a4eiVTamqAKLpsxz3AcyVb2hRBwClj/mvgr9O6iqAyBra6eMG2es1qA3CTISSR497Orn9JRQhZIahXhfID931eI2Y/SUUHM/dkwsAUTJ5xw1B1v4anhDyoPCvDCWTtxxfqHf7A3sIXKEiAKL7943hRFNDe2lLbjTt+FTpp9QEQGQlk2SsLMX4S5ec+4UQAkJZIbKu0hnqVvDmmjKdD6hTKxESb9s1B8ASmgMI51Ih09wDIgwgjDw40gBaG/UGwPaS3gBWt+sNgL1GWgMwdib0BrD6R6Q1gIZ9pBIA4XemsJfbw3O2MG6YyPYLvUSL9VUtB6rZHSM37vA/H2n5gerlgLW7Zca6zPsOrZaeKubAtbxnKD/Mg8DYUdWHrdb2pqn8sN8L9YxV3duIlAVARMlrHi9WNFa1VTv/i8Jtc7c/zH3q4AusObG6+i/Yisp9g6PpVG6cilpoaqNF1wnUB/C4FZ+z+EJvaGmPKU05rHctAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBtlquD6iFuSYUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoFOLSzLO3NVPRqwMGeb25vWJIP9wQOsEcw2Lfq2nnuayx+L+tevxz2WfL/6dlvyn1Kkp83hQ5e8czw30Z0pDfnlDV8XmmuG4wMzMuUPPXuTr+78x3y73WvpK9pN1bm9fSoIYMHXw53wdfQH8vTOzeIN1rnNEgiBonb3A1W/Az/7nM3a6ey9GHwDRoTGeXo+8d8852E9knZYBgPV9rl6ecs4dzkicBzzgksARr53vXSSJAVi9XOHSywF+KHcmOMXTadZj32BGbgCzXDpxV/ncrySvBSyuIHDSdc/71RZA1WuBsXaOTg9d9yyMAPU9a5vy99PHZyKtgFPp9PTlo6WMmytjmx13S5MXVAD7J492r12345XJQTPiLhD75isTYmN0zQTeL9nf/0bhY0fy9cjHgLo/+6t7YTvvsr00iz6zoLiM/eBdM+IA6KvFg8vVPesyBxQ9YMk/F+3oDM4NqgQgvlsIgEtJXKoS3izbs2GwK6iRVin6NwYxWXxUFMDu8l0bNsiRB5DB123A+0zB0/IlQqYYAOeSuDg5/E4+AIXwtYKPlONEWIyBS9rlA8DddriXxLkw0tVqATg9/9M3WMfdy8biy+ifkg9AtqBeX/HOT5ieZWOvfAA+LsRAf+9tdy2JP6pwTo0AgLkX5z8s8+/b4VoSp/gpRgpA7ua51oIHcLwzrM4UKBqiD+DV5csbdhSv4/Acu1ivW0lcUEBVX8Bc3RMiz/CId818JpDwPUiPvrRg6xdS0c8DjLd5em30Loklc4FF7Xtc0StuupTEI7IDOPBrviH0epXE8gIwDvyGs+eestpPHRfgbMtcSuIuuQFYZ3/B2XM+E3iknALO8or6iHtJTESUlxUA39Vx95K4sbwqlC4GPBgXysamVHMBn6UP9pI45awAa0wiAKfS04N7ir/9kfNb7Y6GbiovCpal0+n051FXQKzjZPHS1SznsXMviYmodHpJGhfYbwqK17kkLlaB/w0XgPnkJeaZwifOCqdQEpdtLXzIBmauGVIQ7BQd+nxJnHHSRXXLhCpdHd5dGDrnPLDRcWsxF5YOAO1ZnOT5tiWm++QgMJtEB0Br4cM05xd6nTYW58FHF2UDUDyiOVHJOJSJRNQXJgAjiL/bKxgElnnMjkT06JfBnKMILxUuHlHOcqDO9M6Afn9RLhegpYKZgHO07CiVFQfPixGtNYBiEODNBHY4OkZJF9aPnx24OXnz8sFvBzvQql0X6D1SSGLan2AgZ14sfZ46HJYLmEH84U2CSUxxWdXilNIM1FozxPMBraJBwFEodUeoyq1qAOKiQaDDcetOU1YArFewknGeCOvO1ABAIJnQfIHHHwRijtkwfStACRhhKqBU4PEGgU3OrvRvZwLGkYi7AMVEg0CrS0Zx1mnr03/aXUUAgaguJhoElrj828537du+WNFaYTNUBQgHAdfFYLa14fX9/0pEfhYgWi8aBPa4zpD3Xl+AoH7/X74bYGB0XM8evTftZM8nR2aI6qmnqWLrDVNiAIEcbP4YYCoJwAw5BsjRGHfKJL8HEBQAANwAVIyCJhQgAEDBKGiIxQBTEw+ACzDSxAcMTIOCAEw9QoA7AEMPD4ALMNLDB0xxAIYWHgAXYKSFD5iVADB08ABPFzA1EABiACMNfMCoEIAyPmBWCsBQXwA+McBUXgA+AAzlBeA3C5iqC8APgKG6AHzzAFNxAfgCMBQXgH8maKotAH8AhtoC4KgFTKUFwAHAkJlAPT05AJmdgGPoLAgZyesAfACkdYJ6CgaArE7ANWwWGMro2W8GB0DKMMA3ZhYkTekCAD8A+Qjwei33WWHJAiH3cFngSCUKgERuq8WdW9kTLhTQP4ldGJEmDoiIlZF6BIScVcQFiGS4lULwKIkCiHwgEI3VwgCijUB8qqoAQGQdoaIQVRmACDKoNEBXDECVhgUSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqrf/A7mHHFm63t+2AAAAAElFTkSuQmCC";
+
+  // Home-screen manifest only when hosted (http/https); file:// ignores manifests.
+  function setupManifest() {
+    try {
+      if (!/^https?:$/.test(location.protocol)) return;
+      var link = document.getElementById("appManifest");
+      if (!link) return;
+      var base = location.href.split("#")[0];
+      var icon = document.getElementById("appleTouchIcon");
+      var manifest = {
+        name: "Feeder Cattle P&L — Ring-side",
+        short_name: "Ring-side",
+        start_url: base + "#ring",
+        scope: base.replace(/[^\/]*$/, ""),
+        display: "standalone",
+        background_color: "#ffffff",
+        theme_color: "#0f2a1c",
+        icons: [
+          { src: ICON_512, sizes: "512x512", type: "image/png" },
+          { src: icon ? icon.getAttribute("href") : ICON_512, sizes: "180x180", type: "image/png" }
+        ]
+      };
+      link.setAttribute("href", "data:application/manifest+json;charset=utf-8," + encodeURIComponent(JSON.stringify(manifest)));
+    } catch (e) { /* ignore */ }
+  }
+
+  // Init
+  load();
+  mountScenario(document.querySelector('.panel-body[data-scenario="A"]'), "A");
+  mountScenario(document.querySelector('.panel-body[data-scenario="B"]'), "B");
+  syncInputsFromState("A");
+  syncInputsFromState("B");
+
+  document.getElementById("tabA").addEventListener("click", function () { setView("A"); });
+  document.getElementById("tabB").addEventListener("click", function () { setView("B"); });
+  document.getElementById("tabBoth").addEventListener("click", function () { setView("both"); });
+  document.getElementById("resetBtn").addEventListener("click", resetDefaults);
+
+  var _auctionResizeTimer = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(_auctionResizeTimer);
+    _auctionResizeTimer = setTimeout(renderAuctionBidSheet, 150);
+  });
+
+  setView(state.view);
+
+  // If a scenario is locked (default for fresh devices), sync sale $/cwt to current futures+basis
+  syncLockedSales();
+  syncInputsFromState("A");
+  syncInputsFromState("B");
+  save();
+  render();
+  renderFuturesFooter();
+  setupManifest();
+  ringInit();
+  refreshFuturesFromServer();
+  if (/^https?:$/.test(location.protocol)) {
+    var xl = document.getElementById("auctionXlsx");
+    if (xl) xl.hidden = true;
+  }
+})();
+  </script>
+</body>
+</html>

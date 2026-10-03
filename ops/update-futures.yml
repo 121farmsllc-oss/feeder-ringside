@@ -1,0 +1,46 @@
+name: Update Live Cattle futures
+
+on:
+  schedule:
+    # Weekdays after the CME close: 22:30 UTC = 5:30 PM CDT / 4:30 PM CST (that day's closes)
+    - cron: "30 22 * * 1-5"
+    # Next morning 11:30 UTC = 6:30 AM CDT / 5:30 AM CST: confirms the prior session's final settlements
+    - cron: "30 11 * * 2-6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-futures
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch CME Live Cattle prices
+        run: |
+          set +e
+          python3 scripts/update_futures.py --out futures.json
+          code=$?
+          if [ "$code" = "2" ]; then
+            echo "::warning::No usable futures data this run; futures.json left unchanged (site keeps last good prices)."
+          elif [ "$code" != "0" ]; then
+            exit "$code"
+          fi
+
+      - name: Commit futures.json if it changed
+        run: |
+          if git diff --quiet -- futures.json; then
+            echo "futures.json unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add futures.json
+          git commit -m "Update Live Cattle futures ($(python3 -c 'import json;d=json.load(open("futures.json"));print(d["asOf"], d["priceType"])'))"
+          git push
