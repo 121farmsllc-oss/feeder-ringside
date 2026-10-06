@@ -2,11 +2,11 @@
   "schema": 1,
   "product": "CME Live Cattle futures (LE)",
   "units": "USD per cwt (= cents per lb)",
-  "asOf": "2026-10-02",
+  "asOf": "2026-10-05",
   "priceType": "settle",
-  "source": "Oct 2, 2026 settlements entered by hand: Farmbucks LE futures chain (CME data) = CME final settle Oct 1, 2026 (cmegroup.com settlements) + Oct 2 net change; Dec26/Feb27 cross-checked with Brownfield Ag News Oct 2 closing report",
-  "sourceShort": "CME settlements via Farmbucks (cross-checked Brownfield)",
-  "generatedAt": "2026-10-03T01:20:00Z",
+  "source": "Yahoo Finance (CME LE daily close)",
+  "sourceShort": "CME data via Yahoo Finance",
+  "generatedAt": "2026-10-06T11:29:57Z",
   "contracts": [
     {
       "code": "Oct2026",
@@ -14,8 +14,8 @@
       "symbol": "LEV26",
       "year": 2026,
       "month": 10,
-      "price": 218.85,
-      "date": "2026-10-02"
+      "price": 217.25,
+      "date": "2026-10-05"
     },
     {
       "code": "Dec2026",
@@ -23,8 +23,8 @@
       "symbol": "LEZ26",
       "year": 2026,
       "month": 12,
-      "price": 221.475,
-      "date": "2026-10-02"
+      "price": 219.975,
+      "date": "2026-10-05"
     },
     {
       "code": "Feb2027",
@@ -32,8 +32,8 @@
       "symbol": "LEG27",
       "year": 2027,
       "month": 2,
-      "price": 223.15,
-      "date": "2026-10-02"
+      "price": 222.05,
+      "date": "2026-10-05"
     },
     {
       "code": "Apr2027",
@@ -41,8 +41,8 @@
       "symbol": "LEJ27",
       "year": 2027,
       "month": 4,
-      "price": 224.55,
-      "date": "2026-10-02"
+      "price": 223.4,
+      "date": "2026-10-05"
     },
     {
       "code": "Jun2027",
@@ -50,8 +50,8 @@
       "symbol": "LEM27",
       "year": 2027,
       "month": 6,
-      "price": 219.7,
-      "date": "2026-10-02"
+      "price": 218.35,
+      "date": "2026-10-05"
     },
     {
       "code": "Aug2027",
@@ -59,8 +59,8 @@
       "symbol": "LEQ27",
       "year": 2027,
       "month": 8,
-      "price": 216.55,
-      "date": "2026-10-02"
+      "price": 214.975,
+      "date": "2026-10-05"
     },
     {
       "code": "Oct2027",
@@ -68,8 +68,8 @@
       "symbol": "LEV27",
       "year": 2027,
       "month": 10,
-      "price": 215.125,
-      "date": "2026-10-02"
+      "price": 213.575,
+      "date": "2026-10-05"
     },
     {
       "code": "Dec2027",
@@ -77,8 +77,8 @@
       "symbol": "LEZ27",
       "year": 2027,
       "month": 12,
-      "price": 215.6,
-      "date": "2026-10-02"
+      "price": 214.05,
+      "date": "2026-10-05"
     },
     {
       "code": "Feb2028",
@@ -86,8 +86,8 @@
       "symbol": "LEG28",
       "year": 2028,
       "month": 2,
-      "price": 215.85,
-      "date": "2026-10-02"
+      "price": 214.35,
+      "date": "2026-10-05"
     },
     {
       "code": "Apr2028",
@@ -95,8 +95,8 @@
       "symbol": "LEJ28",
       "year": 2028,
       "month": 4,
-      "price": 216.0,
-      "date": "2026-10-02"
+      "price": 214.5,
+      "date": "2026-10-05"
     }
   ]
 }
