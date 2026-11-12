@@ -2,11 +2,11 @@
   "schema": 1,
   "product": "CME Live Cattle futures (LE)",
   "units": "USD per cwt (= cents per lb)",
-  "asOf": "2026-11-10",
+  "asOf": "2026-11-11",
   "priceType": "settle",
   "source": "Yahoo Finance (CME LE daily close)",
   "sourceShort": "CME data via Yahoo Finance",
-  "generatedAt": "2026-11-11T12:28:00Z",
+  "generatedAt": "2026-11-12T12:27:32Z",
   "contracts": [
     {
       "code": "Dec2026",
@@ -14,8 +14,8 @@
       "symbol": "LEZ26",
       "year": 2026,
       "month": 12,
-      "price": 219.2,
-      "date": "2026-11-10"
+      "price": 218.975,
+      "date": "2026-11-11"
     },
     {
       "code": "Feb2027",
@@ -23,8 +23,8 @@
       "symbol": "LEG27",
       "year": 2027,
       "month": 2,
-      "price": 222.575,
-      "date": "2026-11-10"
+      "price": 222.7,
+      "date": "2026-11-11"
     },
     {
       "code": "Apr2027",
@@ -32,8 +32,8 @@
       "symbol": "LEJ27",
       "year": 2027,
       "month": 4,
-      "price": 225.125,
-      "date": "2026-11-10"
+      "price": 225.625,
+      "date": "2026-11-11"
     },
     {
       "code": "Jun2027",
@@ -41,8 +41,8 @@
       "symbol": "LEM27",
       "year": 2027,
       "month": 6,
-      "price": 220.625,
-      "date": "2026-11-10"
+      "price": 221.05,
+      "date": "2026-11-11"
     },
     {
       "code": "Aug2027",
@@ -50,8 +50,8 @@
       "symbol": "LEQ27",
       "year": 2027,
       "month": 8,
-      "price": 216.375,
-      "date": "2026-11-10"
+      "price": 216.65,
+      "date": "2026-11-11"
     },
     {
       "code": "Oct2027",
@@ -59,8 +59,8 @@
       "symbol": "LEV27",
       "year": 2027,
       "month": 10,
-      "price": 214.275,
-      "date": "2026-11-10"
+      "price": 214.6,
+      "date": "2026-11-11"
     },
     {
       "code": "Dec2027",
@@ -68,8 +68,8 @@
       "symbol": "LEZ27",
       "year": 2027,
       "month": 12,
-      "price": 214.575,
-      "date": "2026-11-10"
+      "price": 214.9,
+      "date": "2026-11-11"
     },
     {
       "code": "Feb2028",
@@ -77,8 +77,8 @@
       "symbol": "LEG28",
       "year": 2028,
       "month": 2,
-      "price": 215.025,
-      "date": "2026-11-10"
+      "price": 215.15,
+      "date": "2026-11-11"
     },
     {
       "code": "Apr2028",
@@ -86,8 +86,8 @@
       "symbol": "LEJ28",
       "year": 2028,
       "month": 4,
-      "price": 214.975,
-      "date": "2026-11-10"
+      "price": 215.3,
+      "date": "2026-11-11"
     },
     {
       "code": "Jun2028",
@@ -95,8 +95,8 @@
       "symbol": "LEM28",
       "year": 2028,
       "month": 6,
-      "price": 207.8,
-      "date": "2026-11-10"
+      "price": 208.325,
+      "date": "2026-11-11"
     }
   ]
 }
